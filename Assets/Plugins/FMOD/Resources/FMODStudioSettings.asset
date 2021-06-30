@@ -461,14 +461,14 @@ MonoBehaviour:
   m_Name: FMODStudioSettings
   m_EditorClassIdentifier: 
   SwitchSettingsMigration: 1
-  HasSourceProject: 1
+  HasSourceProject: 0
   HasPlatforms: 1
-  sourceProjectPath: 
-  sourceBankPath: 
+  sourceProjectPath: E:/Documents/Travail/ProjetPersos/TheLastBeat/Sessions/TheLastBeat_Fmod/TheLastBeat_Fmod/TheLastBeat_Fmod.fspro
+  sourceBankPath: FMODBanks
   SourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
-  AutomaticEventLoading: 1
+  AutomaticEventLoading: 0
   BankLoadType: 0
   AutomaticSampleLoading: 0
   EncryptionKey: 
@@ -485,8 +485,10 @@ MonoBehaviour:
   VirtualChannelSettings: []
   RealChannelSettings: []
   Plugins: []
-  MasterBanks: []
-  Banks: []
+  MasterBanks:
+  - Master
+  Banks:
+  - Tests
   BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0
@@ -497,19 +499,19 @@ MonoBehaviour:
   EnableErrorCallback: 0
   SharedLibraryUpdateStage: 0
   SharedLibraryTimeSinceStart: 0
-  HideSetupWizard: 0
+  HideSetupWizard: 1
   Platforms:
-  - {fileID: -7794063517577398667}
-  - {fileID: -4984854152836459904}
-  - {fileID: 5429508634216071223}
-  - {fileID: 8284503960723818197}
-  - {fileID: -6567231737236813165}
-  - {fileID: -1848192793810313053}
-  - {fileID: -4672926377925312996}
-  - {fileID: -1059746929396045646}
-  - {fileID: 4727630172693653343}
-  - {fileID: 4320274059931337282}
   - {fileID: -7157819779233541889}
+  - {fileID: 4320274059931337282}
+  - {fileID: 4727630172693653343}
+  - {fileID: -1059746929396045646}
+  - {fileID: -4672926377925312996}
+  - {fileID: -1848192793810313053}
+  - {fileID: -6567231737236813165}
+  - {fileID: 8284503960723818197}
+  - {fileID: 5429508634216071223}
+  - {fileID: -4984854152836459904}
+  - {fileID: -7794063517577398667}
   MigratedPlatforms: 0c000000150000000b0000000a00000009000000120000000800000005000000060000000200000001000000
 --- !u!114 &4320274059931337282
 MonoBehaviour:
@@ -571,15 +573,15 @@ MonoBehaviour:
       Value: {fileID: 0}
       HasValue: 0
   childIdentifiers:
-  - 2fea114e74ecf3c4f920e1d5cc1c4c40
-  - 46fbfdf3fc43db0458918377fd40293e
-  - 0f8eb3f400726694eb47beb1a9f94ce8
-  - b7716510a1f36934c87976f3a81dbf3d
-  - 52eb9df5db46521439908db3a29a1bbb
-  - e7a046c753c3c3d4aacc91f6597f310d
-  - 2c5177b11d81d824dbb064f9ac8527da
-  - fd7c55dab0fce234b8c25f6ffca523c1
   - c88d16e5272a4e241b0ef0ac2e53b73d
+  - fd7c55dab0fce234b8c25f6ffca523c1
+  - 2c5177b11d81d824dbb064f9ac8527da
+  - e7a046c753c3c3d4aacc91f6597f310d
+  - 52eb9df5db46521439908db3a29a1bbb
+  - b7716510a1f36934c87976f3a81dbf3d
+  - 0f8eb3f400726694eb47beb1a9f94ce8
+  - 46fbfdf3fc43db0458918377fd40293e
+  - 2fea114e74ecf3c4f920e1d5cc1c4c40
   outputType: 
   threadAffinities:
     Value: []
