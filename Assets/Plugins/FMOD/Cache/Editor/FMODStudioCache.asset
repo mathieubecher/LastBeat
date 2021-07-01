@@ -78,7 +78,7 @@ MonoBehaviour:
   Path: FMODBanks/Desktop/Tests.bank
   Name: Tests
   StudioPath: bank:/Tests
-  lastModified: 637606920081653113
+  lastModified: 637607727350576422
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -128,7 +128,7 @@ MonoBehaviour:
   - {fileID: 1111121003136065313}
   StringsBanks:
   - {fileID: 7510290378133402457}
-  stringsBankWriteTime: 637606920081443677
+  stringsBankWriteTime: 637607727350396901
   cacheVersion: 8
 --- !u!114 &358921428521934172
 MonoBehaviour:
@@ -233,7 +233,7 @@ MonoBehaviour:
   Path: FMODBanks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637606920081433703
+  lastModified: 637607727350396901
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -319,7 +319,7 @@ MonoBehaviour:
   Path: FMODBanks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637606920081443677
+  lastModified: 637607727350396901
   LoadResult: 0
   FileSizes:
   - Name: Desktop
