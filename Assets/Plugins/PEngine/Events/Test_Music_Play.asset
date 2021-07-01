@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   steps:
   - stepType: 0
-    soundToPlay: {fileID: 11400000, guid: 372631842ada1bb42abfe3887b0a281e, type: 2}
+    soundToPlay: {fileID: 11400000, guid: 11cdd7037ead39d47b5aea97d6bf0275, type: 2}
     playInitialDelay: 0
     playProbability: 1
     fadeIn: 0

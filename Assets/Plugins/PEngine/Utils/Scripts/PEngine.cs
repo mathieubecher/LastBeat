@@ -440,7 +440,7 @@ public class PEngine : MonoBehaviour
     {
         List<EventSO> lEvents = new List<EventSO>();
 
-        string[] lGuids = AssetDatabase.FindAssets("t:EventSO", new string[] { "Assets/PEngine/Events" });
+        string[] lGuids = AssetDatabase.FindAssets("t:EventSO", new string[] { "Assets/Plugins/PEngine/Events" });
 
         for (int i = 0; i < lGuids.Length; i++)
         {
@@ -458,7 +458,7 @@ public class PEngine : MonoBehaviour
     {
         List<GameObject> gameObjects = new List<GameObject>();
 
-        string[] prefabs = AssetDatabase.FindAssets("t:GameObject", new string[] { "Assets/PEngine/Utils/Prefabs" });
+        string[] prefabs = AssetDatabase.FindAssets("t:GameObject", new string[] { "Assets/Plugins/PEngine/Utils/Prefabs" });
 
         for (int i = 0; i < prefabs.Length; i++)
         {
