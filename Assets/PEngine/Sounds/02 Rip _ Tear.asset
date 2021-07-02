@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: a0de8f1ba21b0fd4488321390ba70cab, type: 3}
   bus: {fileID: 0}
-  volume: 1
+  volume: 0.3
   setVolumeParameter: 0
   volumeParameter: {fileID: 0}
   volumeCurve:
@@ -42,7 +42,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  spatialBlend: 0
+  spatialBlend: 1
   setSpatialBlendParameter: 0
   spatialBlendParameter: {fileID: 0}
   spatialBlendCurve:
@@ -62,10 +62,28 @@ MonoBehaviour:
     m_RotationOrder: 4
   customSpatialization: 0
   bypassPanning: 0
-  maxAttenuationDistance: 0
+  maxAttenuationDistance: 50
   attenuationCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: -0
+      value: 0.99928683
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0.009154715
+      inSlope: -0.22027178
+      outSlope: -0.22027178
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.14991438
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
