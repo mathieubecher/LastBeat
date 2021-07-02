@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7817728241097396648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0c6d0f5cd1d8944caa6a4ceb1c8fc29, type: 3}
+  m_Name: Dialog Segment
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -8, y: -72}
+  ports:
+    keys:
+    - input
+    - Answers
+    values:
+    - _fieldName: input
+      _node: {fileID: -7817728241097396648}
+      _typeQualifiedName: DialogSystem.DialogSegment+Connection, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Answers 0
+        node: {fileID: -1154848173705229726}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Answers
+      _node: {fileID: -7817728241097396648}
+      _typeQualifiedName: System.Collections.Generic.List`1[[System.String, mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  dialogText: 
+  source: 
+  Answers: []
+--- !u!114 &-1154848173705229726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0c6d0f5cd1d8944caa6a4ceb1c8fc29, type: 3}
+  m_Name: Dialog Segment
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -232, y: -72}
+  ports:
+    keys:
+    - input
+    - Answers
+    - Answers 0
+    values:
+    - _fieldName: input
+      _node: {fileID: -1154848173705229726}
+      _typeQualifiedName: DialogSystem.DialogSegment+Connection, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Answers
+      _node: {fileID: -1154848173705229726}
+      _typeQualifiedName: System.Collections.Generic.List`1[[System.String, mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Answers 0
+      _node: {fileID: -1154848173705229726}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: input
+        node: {fileID: -7817728241097396648}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  dialogText: 
+  source: 
+  Answers:
+  - test
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5679fd1a269535949a0ef24641384a58, type: 3}
+  m_Name: New Narrative Graph
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -1154848173705229726}
+  - {fileID: -7817728241097396648}

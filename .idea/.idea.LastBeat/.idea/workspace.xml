@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="969d5e7e-36e8-459f-b96f-fac19c086976" name="Default Changelist" comment="" />
@@ -9,14 +9,24 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Script/Line.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Script/CardiogramController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/XNode/DialogNodeEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Cardiogram/Cardiogram.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Cardiogram/Line.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/XNode/DialogSegment.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/XNode/NarrativeGraph.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Cardiogram/Controller.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Script/Line.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/CardiogramController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Cardiogram/Cardiogram.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Cardiogram/Line.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Cardiogram/Controller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/XNode/NarrativeGraph.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/XNode/DialogSegment.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/XNode/DialogNodeEditor.cs" />
       </list>
     </option>
   </component>
@@ -49,6 +59,8 @@
       <option name="presentableId" value="Default" />
       <updated>1625071442674</updated>
       <workItem from="1625071445827" duration="4708000" />
+      <workItem from="1625171515129" duration="2449000" />
+      <workItem from="1625244255341" duration="7126000" />
     </task>
     <servers />
   </component>
