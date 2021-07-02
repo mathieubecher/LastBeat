@@ -4,17 +4,36 @@
     <e p="C:\Users\mbelk\.Rider2019.2\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\mbelk\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_LastBeat.-1708913047.00" t="ExcludeRecursive" />
     <e p="C:\Users\mbelk\Unity\LastBeat" t="IncludeRecursive">
-      <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
-      <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="Plugins" t="Include">
-          <e p="Editor" t="Include">
-            <e p="ContainerSOInspect.cs" t="Include" />
-            <e p="EventStepInspector.cs" t="Include" />
-            <e p="SetSwitchInspector.cs" t="Include" />
-            <e p="SoundSOInspector.cs" t="Include" />
+        <e p="Editor" t="Include">
+          <e p="ContainerSOInspect.cs" t="Include" />
+          <e p="EventStepInspector.cs" t="Include" />
+          <e p="SetSwitchInspector.cs" t="Include" />
+          <e p="SoundSOInspector.cs" t="Include" />
+        </e>
+        <e p="PEngine" t="Include">
+          <e p="Utils" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="ContainerSO.cs" t="Include" />
+              <e p="EventSO.cs" t="Include" />
+              <e p="EventStep.cs" t="Include" />
+              <e p="ParameterSO.cs" t="Include" />
+              <e p="PEngine.cs" t="Include" />
+              <e p="PEngineListener.cs" t="Include" />
+              <e p="PEngineObject.cs" t="Include" />
+              <e p="PEnginePostEvent.cs" t="Include" />
+              <e p="PEngineSource.cs" t="Include" />
+              <e p="SetParameter.cs" t="Include" />
+              <e p="SetSwitch.cs" t="Include" />
+              <e p="SoundSO.cs" t="Include" />
+              <e p="SwitchGroupSO.cs" t="Include" />
+              <e p="SwitchSounds.cs" t="Include" />
+            </e>
           </e>
+        </e>
+        <e p="Plugins" t="Include">
           <e p="FMOD" t="Include">
             <e p="addons" t="Include">
               <e p="ResonanceAudio" t="Include">
@@ -137,26 +156,6 @@
               </e>
             </e>
           </e>
-          <e p="PEngine" t="Include">
-            <e p="Utils" t="Include">
-              <e p="Scripts" t="Include">
-                <e p="ContainerSO.cs" t="Include" />
-                <e p="EventSO.cs" t="Include" />
-                <e p="EventStep.cs" t="Include" />
-                <e p="ParameterSO.cs" t="Include" />
-                <e p="PEngine.cs" t="Include" />
-                <e p="PEngineListener.cs" t="Include" />
-                <e p="PEngineObject.cs" t="Include" />
-                <e p="PEnginePostEvent.cs" t="Include" />
-                <e p="PEngineSource.cs" t="Include" />
-                <e p="SetParameter.cs" t="Include" />
-                <e p="SetSwitch.cs" t="Include" />
-                <e p="SoundSO.cs" t="Include" />
-                <e p="SwitchGroupSO.cs" t="Include" />
-                <e p="SwitchSounds.cs" t="Include" />
-              </e>
-            </e>
-          </e>
           <e p="xNode-master" t="Include">
             <e p="Scripts" t="Include">
               <e p="Attributes" t="Include">
@@ -224,6 +223,7 @@
             <e p="DialogNodeEditor.cs" t="Include" />
             <e p="DialogSegment.cs" t="Include" />
             <e p="NarrativeGraph.cs" t="Include" />
+            <e p="NarrativeManager.cs" t="Include" />
           </e>
         </e>
       </e>
