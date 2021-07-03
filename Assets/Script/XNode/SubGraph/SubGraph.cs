@@ -13,21 +13,24 @@ namespace NarrativeSystem
 	public class SubGraph : NarrativeSegment
 	{
 		public NarrativeGraph subGraph;
+		private NarrativeGraph _subGraphInstance;
 		
 		public override void InitNode(NarrativeGraph _graph)
 		{
 			base.InitNode(_graph);
 			Debug.Log("Start [ SubGraph ]");
-			subGraph.InitGraph();
+			_subGraphInstance = subGraph.Copy() as NarrativeGraph;
+			
+			_subGraphInstance.InitGraph();
 		}
 
 
 		public override void UpdateNode()
 		{
 			base.UpdateNode();
-			subGraph.UpdateGraph();
+			_subGraphInstance.UpdateGraph();
 			
-			if(subGraph.Ended())
+			if(_subGraphInstance.Ended())
 				EndNode();
 		}
 		
@@ -39,6 +42,10 @@ namespace NarrativeSystem
 		}
 		
 	}
+	
+	
+	
+	#region EDITOR
 
 	[NodeEditor.CustomNodeEditorAttribute(typeof(SubGraph))]
 	public class SubGraphEditor : NarrativeSegmentEditor
@@ -66,4 +73,5 @@ namespace NarrativeSystem
 			serializedObject.ApplyModifiedProperties();
 		}
 	}
+	#endregion
 }

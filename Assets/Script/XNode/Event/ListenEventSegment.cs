@@ -54,7 +54,7 @@ namespace NarrativeSystem
 	
 	
 	
-	
+	#region EDITOR
 	[NodeEditor.CustomNodeEditorAttribute(typeof(ListenEventSegment))]
 	public class ListenEventSegmentEditor : NarrativeSegmentEditor
 	{
@@ -85,4 +85,5 @@ namespace NarrativeSystem
 			serializedObject.ApplyModifiedProperties();
 		}
 	}
+	#endregion
 }

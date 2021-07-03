@@ -40,11 +40,11 @@
         <option value="$PROJECT_DIR$/Assets/Script/XNode/GraphSegment.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/XNode/Dialog/DialogNodeEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/XNode/NarrativeManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/XNode/NarrativeSegment.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/XNode/NarrativeGraph.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/XNode/Event/ListenEventSegment.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/XNode/Dialog/DialogSegment.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/XNode/Event/ListenEventSegment.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/XNode/SubGraph/SubGraph.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/XNode/NarrativeSegment.cs" />
       </list>
     </option>
   </component>
@@ -80,7 +80,7 @@
       <workItem from="1625071445827" duration="4708000" />
       <workItem from="1625171515129" duration="2449000" />
       <workItem from="1625244255341" duration="7922000" />
-      <workItem from="1625298747638" duration="24061000" />
+      <workItem from="1625298747638" duration="26614000" />
     </task>
     <servers />
   </component>

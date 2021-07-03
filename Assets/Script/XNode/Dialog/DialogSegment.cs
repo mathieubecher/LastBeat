@@ -47,7 +47,11 @@ namespace NarrativeSystem
             Debug.Log("End [ "+dialogText+" ]");
         }
     }
+	
     
+    
+    
+    #region EDITOR
     
     [NodeEditor.CustomNodeEditorAttribute(typeof(DialogSegment))]
     public class DialogSegmentEditor : NarrativeSegmentEditor
@@ -82,4 +86,5 @@ namespace NarrativeSystem
             serializedObject.ApplyModifiedProperties();
         }
     }
+    #endregion
 }

@@ -234,6 +234,70 @@
             </e>
           </e>
         </e>
+        <e p="SteamAudio" t="Include">
+          <e p="AudioEngine.cs" t="Include" />
+          <e p="AudioEngineAmbisonicsSource.cs" t="Include" />
+          <e p="AudioEngineAmbisonicsSource_Unity.cs" t="Include" />
+          <e p="AudioEngineAmbisonicsSourceFactory.cs" t="Include" />
+          <e p="AudioEngineSource.cs" t="Include" />
+          <e p="AudioEngineSource_FMODStudio.cs" t="Include" />
+          <e p="AudioEngineSource_Unity.cs" t="Include" />
+          <e p="AudioEngineSourceFactory.cs" t="Include" />
+          <e p="AudioEngineState.cs" t="Include" />
+          <e p="AudioEngineState_FMODStudio.cs" t="Include" />
+          <e p="AudioEngineState_Unity.cs" t="Include" />
+          <e p="AudioEngineStateFactory.cs" t="Include" />
+          <e p="Baker.cs" t="Include" />
+          <e p="Common.cs" t="Include" />
+          <e p="ComponentCache.cs" t="Include" />
+          <e p="ComputeDevice.cs" t="Include" />
+          <e p="Core.cs" t="Include" />
+          <e p="Core_FMODStudio.cs" t="Include" />
+          <e p="Core_Unity.cs" t="Include" />
+          <e p="Editor" t="Include">
+            <e p="Build.cs" t="Include" />
+            <e p="MaterialValueDrawer.cs" t="Include" />
+            <e p="SimulationSettingsValueDrawer.cs" t="Include" />
+            <e p="SteamAudioAmbisonicsSourceInspector.cs" t="Include" />
+            <e p="SteamAudioBakedStaticListenerNodeInspector.cs" t="Include" />
+            <e p="SteamAudioCustomSettingsInspector.cs" t="Include" />
+            <e p="SteamAudioDynamicObjectInspector.cs" t="Include" />
+            <e p="SteamAudioGeometryInspector.cs" t="Include" />
+            <e p="SteamAudioListenerInspector.cs" t="Include" />
+            <e p="SteamAudioManagerInspector.cs" t="Include" />
+            <e p="SteamAudioMaterialInspector.cs" t="Include" />
+            <e p="SteamAudioMixerReturnGUI.cs" t="Include" />
+            <e p="SteamAudioProbeBoxInspector.cs" t="Include" />
+            <e p="SteamAudioReverbGUI.cs" t="Include" />
+            <e p="SteamAudioSourceInspector.cs" t="Include" />
+            <e p="SteamAudioWindow.cs" t="Include" />
+          </e>
+          <e p="Environment.cs" t="Include" />
+          <e p="GameEngineState.cs" t="Include" />
+          <e p="ManagerData.cs" t="Include" />
+          <e p="MaterialPreset.cs" t="Include" />
+          <e p="MaterialPresetList.cs" t="Include" />
+          <e p="MaterialValue.cs" t="Include" />
+          <e p="ProbeManager.cs" t="Include" />
+          <e p="RayTracer.cs" t="Include" />
+          <e p="Scene.cs" t="Include" />
+          <e p="SceneExporter.cs" t="Include" />
+          <e p="SimulationSettingsPreset.cs" t="Include" />
+          <e p="SimulationSettingsPresetList.cs" t="Include" />
+          <e p="SimulationSettingsValue.cs" t="Include" />
+          <e p="SteamAudioAmbisonicsSource.cs" t="Include" />
+          <e p="SteamAudioBakedStaticListenerNode.cs" t="Include" />
+          <e p="SteamAudioCustomSettings.cs" t="Include" />
+          <e p="SteamAudioCustomSpeakerLayout.cs" t="Include" />
+          <e p="SteamAudioDynamicObject.cs" t="Include" />
+          <e p="SteamAudioGeometry.cs" t="Include" />
+          <e p="SteamAudioListener.cs" t="Include" />
+          <e p="SteamAudioManager.cs" t="Include" />
+          <e p="SteamAudioMaterial.cs" t="Include" />
+          <e p="SteamAudioProbeBox.cs" t="Include" />
+          <e p="SteamAudioSource.cs" t="Include" />
+          <e p="Version.cs" t="Include" />
+        </e>
         <e p="xNode-examples" t="Include">
           <e p="Examples" t="Include">
             <e p="LogicToy" t="Include">

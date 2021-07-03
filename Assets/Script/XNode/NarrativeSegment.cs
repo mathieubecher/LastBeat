@@ -7,7 +7,7 @@ using XNode;
 using XNodeEditor;
 
 namespace NarrativeSystem{
-    public class NarrativeSegment : Node {
+    public abstract class NarrativeSegment : Node {
         
         
         [Serializable]
@@ -56,6 +56,11 @@ namespace NarrativeSystem{
 
     }
 
+    
+    
+	
+    #region EDITOR
+
     [NodeEditor.CustomNodeEditorAttribute(typeof(NarrativeSegment))]
     public class NarrativeSegmentEditor : NodeEditor
     {
@@ -73,14 +78,6 @@ namespace NarrativeSystem{
 	    }
 	    
     }
-    /*
-    Rect dotRect = GUILayoutUtility.GetLastRect();
-	dotRect.size = new Vector2(16, 16);
-	dotRect.y += 6;
-
-	GUI.color = graphEditor.GetLerpColor(Color.red, Color.green, node, node.led);
-	GUI.DrawTexture(dotRect, NodeEditorResources.dot);
-	GUI.color = Color.white;
-     */
+    #endregion
     
 }
