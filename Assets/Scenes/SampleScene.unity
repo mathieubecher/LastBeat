@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79ab02fb17a70e74faa4dfaf3f66405b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _narrativeGraph: {fileID: 11400000, guid: 42eaec3cf85c1e04b848db4c993e2687, type: 2}
+  _narrativeGraph: {fileID: 11400000, guid: 0989c94ad322b0c46aae561fe47042aa, type: 2}
   _activeSegment: {fileID: 0}
 --- !u!4 &479290113
 Transform:

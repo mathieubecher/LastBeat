@@ -6,7 +6,7 @@ using UnityEngine;
 using XNode;
 using XNodeEditor;
 
-namespace DialogSystem
+namespace NarrativeSystem
 {
     public class NarrativeManager : MonoBehaviour
     {
@@ -15,14 +15,12 @@ namespace DialogSystem
 
         void Start()
         {
-            foreach (Node node in _narrativeGraph.nodes)
-            {
-                if (!node.GetInputPort("input").IsConnected)
-                {
-                    _activeSegment = node;
-                    break;
-                }
-            }
+            _narrativeGraph.InitGraph();
+        }
+
+        void Update()
+        {
+            _narrativeGraph.UpdateGraph();
         }
         
     }

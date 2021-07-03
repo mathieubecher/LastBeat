@@ -220,10 +220,79 @@
             <e p="InputMaster.cs" t="Include" />
           </e>
           <e p="XNode" t="Include">
-            <e p="DialogNodeEditor.cs" t="Include" />
-            <e p="DialogSegment.cs" t="Include" />
+            <e p="Dialog" t="Include">
+              <e p="DialogSegment.cs" t="Include" />
+            </e>
+            <e p="Event" t="Include">
+              <e p="ListenEventSegment.cs" t="Include" />
+            </e>
             <e p="NarrativeGraph.cs" t="Include" />
             <e p="NarrativeManager.cs" t="Include" />
+            <e p="NarrativeSegment.cs" t="Include" />
+            <e p="SubGraph" t="Include">
+              <e p="SubGraph.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="xNode-examples" t="Include">
+          <e p="Examples" t="Include">
+            <e p="LogicToy" t="Include">
+              <e p="Editor" t="Include">
+                <e p="LogicGraphEditor.cs" t="Include" />
+                <e p="LogicNodeEditor.cs" t="Include" />
+              </e>
+              <e p="ITimerTick.cs" t="Include" />
+              <e p="LogicGraph.cs" t="Include" />
+              <e p="Nodes" t="Include">
+                <e p="AndNode.cs" t="Include" />
+                <e p="LogicNode.cs" t="Include" />
+                <e p="NotNode.cs" t="Include" />
+                <e p="PulseNode.cs" t="Include" />
+                <e p="ToggleNode.cs" t="Include" />
+              </e>
+            </e>
+            <e p="MathGraph" t="Include">
+              <e p="Editor" t="Include">
+                <e p="MathGraphEditor.cs" t="Include" />
+              </e>
+              <e p="MathGraph.cs" t="Include" />
+              <e p="Nodes" t="Include">
+                <e p="DisplayValue.cs" t="Include" />
+                <e p="Editor" t="Include">
+                  <e p="DisplayValueEditor.cs" t="Include" />
+                </e>
+                <e p="MathNode.cs" t="Include" />
+                <e p="Vector.cs" t="Include" />
+              </e>
+            </e>
+            <e p="RuntimeMathGraph" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="Connection.cs" t="Include" />
+                <e p="NodeDrag.cs" t="Include" />
+                <e p="RuntimeMathGraph.cs" t="Include" />
+                <e p="RuntimeNodes" t="Include">
+                  <e p="UGUIDisplayValue.cs" t="Include" />
+                  <e p="UGUIMathBaseNode.cs" t="Include" />
+                  <e p="UGUIMathNode.cs" t="Include" />
+                  <e p="UGUIVector.cs" t="Include" />
+                </e>
+                <e p="UGUIContextMenu.cs" t="Include" />
+                <e p="UGUIPort.cs" t="Include" />
+                <e p="UGUITooltip.cs" t="Include" />
+              </e>
+            </e>
+            <e p="StateMachine" t="Include">
+              <e p="Editor" t="Include">
+                <e p="StateGraphEditor.cs" t="Include" />
+              </e>
+              <e p="Nodes" t="Include">
+                <e p="Editor" t="Include">
+                  <e p="StateNodeEditor.cs" t="Include" />
+                </e>
+                <e p="StateNode.cs" t="Include" />
+              </e>
+              <e p="StateGraph.cs" t="Include" />
+            </e>
           </e>
         </e>
       </e>
