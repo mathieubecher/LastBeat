@@ -41,15 +41,14 @@ AudioSource:
   m_GameObject: {fileID: 2760858916714337950}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 67c32f16ad976ed40990b0a52f5422e1,
-    type: 2}
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
-  Spatialize: 0
+  Spatialize: 1
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 0.05
@@ -143,6 +142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   volumeValue: 0
   volumeRTPC: 0
+  volumeFadeFactor: 0
   setVolumeParameter: 0
   volumeParameter: {fileID: 0}
   volumeCurve:
@@ -181,6 +181,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  priorityRTPC: 0
+  priorityValue: 0
   setPriorityParameter: 0
   priorityParameter: {fileID: 0}
   priorityCurve:
@@ -199,3 +201,4 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  fadingIn: 0
