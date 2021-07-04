@@ -6,7 +6,7 @@ public class NarrativeActor : MonoBehaviour
 {
     public string id;
 
-    public void Goto()
+    public void Goto(float duration)
     {
         
     }

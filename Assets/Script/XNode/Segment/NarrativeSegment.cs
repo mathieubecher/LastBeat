@@ -111,7 +111,7 @@ namespace NarrativeSystem{
 		    serializedObject.ApplyModifiedProperties();
 	    }
 
-	    public abstract void Body(NarrativeSegment segment);
+	    public virtual void Body(NarrativeSegment segment){}
     }
     #endregion
     

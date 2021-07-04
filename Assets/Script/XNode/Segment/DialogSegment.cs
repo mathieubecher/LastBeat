@@ -32,11 +32,8 @@ namespace NarrativeSystem
     {
         public override void Body(NarrativeSegment segment)
         {
+            base.Body(segment);
             var dialog = (DialogSegment)segment;
-
-            dialog.waiting = EditorGUILayout.FloatField("Waiting", dialog.waiting);
-            dialog.actorId = EditorGUILayout.TextField("Actor ID", dialog.actorId);
-            dialog.source = EditorGUILayout.TextField("Source", dialog.source);
             GUILayout.Label("Dialog Text");
             dialog.dialogText = GUILayout.TextArea(dialog.dialogText, new GUILayoutOption[]
             {

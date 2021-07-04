@@ -82,6 +82,7 @@ namespace NarrativeSystem
             var audio = (AudioSegment)segment;
 
             audio.waiting = EditorGUILayout.FloatField("Waiting", audio.waiting);
+            GUILayout.Space(10);
             audio.actorId = EditorGUILayout.TextField("Actor ID", audio.actorId);
             audio.source = EditorGUILayout.TextField("Source", audio.source);
         }

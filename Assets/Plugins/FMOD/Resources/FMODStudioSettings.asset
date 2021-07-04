@@ -243,7 +243,8 @@ MonoBehaviour:
       Value: 0
       HasValue: 0
     Plugins:
-      Value: []
+      Value:
+      - phonon_fmod
       HasValue: 1
     StaticPlugins:
       Value: []
@@ -349,8 +350,8 @@ MonoBehaviour:
   SourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
-  AutomaticEventLoading: 1
-  BankLoadType: 0
+  AutomaticEventLoading: 0
+  BankLoadType: 2
   AutomaticSampleLoading: 0
   EncryptionKey: 
   ImportType: 0
@@ -370,9 +371,6 @@ MonoBehaviour:
   - Desktop/Master
   Banks:
   - Desktop/Tests
-  - Music
-  - SFX
-  - VO
   BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0
@@ -448,9 +446,8 @@ MonoBehaviour:
       Value: 0
       HasValue: 0
     Plugins:
-      Value:
-      - 
-      HasValue: 1
+      Value: []
+      HasValue: 0
     StaticPlugins:
       Value: []
       HasValue: 0
