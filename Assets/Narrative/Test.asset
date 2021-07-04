@@ -92,6 +92,7 @@ MonoBehaviour:
     - input
     - outputs
     - outputs 0
+    - outputs 1
     values:
     - _fieldName: input
       _node: {fileID: -6095351589182064281}
@@ -119,6 +120,18 @@ MonoBehaviour:
       connections:
       - fieldName: input
         node: {fileID: -5188123968641175146}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: outputs 1
+      _node: {fileID: -6095351589182064281}
+      _typeQualifiedName: NarrativeSystem.NarrativeSegment+Connection, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -4732060650757480546}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -256,6 +269,53 @@ MonoBehaviour:
   waiting: 0
   source: testaudio0
   actorId: Actor1
+--- !u!114 &-4732060650757480546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99994152cec28d047a6b02232addd950, type: 3}
+  m_Name: Go To Segment
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -792, y: 488}
+  ports:
+    keys:
+    - input
+    - outputs
+    values:
+    - _fieldName: input
+      _node: {fileID: -4732060650757480546}
+      _typeQualifiedName: NarrativeSystem.NarrativeSegment+Connection, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: outputs 1
+        node: {fileID: -6095351589182064281}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: outputs
+      _node: {fileID: -4732060650757480546}
+      _typeQualifiedName: System.Collections.Generic.List`1[[NarrativeSystem.NarrativeSegment+Connection,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  outputs: []
+  active: 0
+  waiting: 0
+  actorId: Actor1
+  position: 
+  duration: 5
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -269,7 +329,6 @@ MonoBehaviour:
   m_Name: Test
   m_EditorClassIdentifier: 
   nodes:
-  - {fileID: -7154260074155529136}
   - {fileID: 1479432652932747704}
   - {fileID: 2228536541450329766}
   - {fileID: 3143158614583022121}
@@ -278,6 +337,8 @@ MonoBehaviour:
   - {fileID: -5188123968641175146}
   - {fileID: 4143828812003321438}
   - {fileID: 7053723623155730788}
+  - {fileID: -7154260074155529136}
+  - {fileID: -4732060650757480546}
   _actives:
   - {fileID: 1479432652932747704}
   - {fileID: -5228591618844652772}
