@@ -12,16 +12,18 @@ namespace NarrativeSystem
     {
         [SerializeField] private NarrativeGraph _narrativeGraph;
         [SerializeField] private Node _activeSegment;
-
+        [HideInInspector] public Controller controller;
+        
         void Start()
         {
-            _narrativeGraph.InitGraph();
+            controller = FindObjectOfType<Controller>();
+            _narrativeGraph.InitGraph(this);
         }
 
         void Update()
         {
             _narrativeGraph.UpdateGraph();
         }
-        
+
     }
 }

@@ -26,4 +26,18 @@ public class Controller : MonoBehaviour
             _beatHistory.Remove(_beatHistory.First());
 
     }
+
+    
+        public float Frequency(float duration)
+        {
+            if (duration == 0) return 0.0f;
+            int count = 0;
+            float time = Time.time;
+            while (_beatHistory.Count > count && _beatHistory[_beatHistory.Count - count - 1] >= time)
+            {
+                ++count;
+            }
+
+            return count / duration;
+        }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using XNode;
+using XNodeEditor;
 
 namespace NarrativeSystem
 {
@@ -11,13 +12,14 @@ namespace NarrativeSystem
 	{
 		[SerializeField] private List<NarrativeSegment> _actives;
 		[SerializeField] private List<NarrativeSegment> _requestings;
-		
 
-		public void InitGraph()
+		[HideInInspector] public NarrativeManager narrativeManager; 
+
+		public void InitGraph(NarrativeManager manager)
 		{
 			_requestings = new List<NarrativeSegment>();
 			_actives = new List<NarrativeSegment>();
-			
+			narrativeManager = manager;
 			
 			foreach (NarrativeSegment node in nodes)
 			{
@@ -32,18 +34,28 @@ namespace NarrativeSystem
 		
 		public void UpdateGraph()
 		{
-			
+			bool refreshGraph = false;
 			for (int i = _actives.Count - 1; i >= 0; --i)
 			{
-				if(!_actives[i].active)
+				if (!_actives[i].active)
+				{
 					_actives.RemoveAt(i);
+					refreshGraph = true;
+				}
+					
+				
 			}
-
+			
 			foreach(var requesting in _requestings)
 			{
-				_actives.Add(requesting);	
-				requesting.InitNode(this);
+				if (!requesting.active)
+				{
+					_actives.Add(requesting);	
+					requesting.InitNode(this);
+					refreshGraph = true;
+				}
 			}
+			if(refreshGraph) NodeEditorWindow.current.Repaint();
 			_requestings = new List<NarrativeSegment>();
 			
 			foreach (NarrativeSegment node in _actives)

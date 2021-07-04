@@ -38,6 +38,11 @@ namespace NarrativeSystem{
 			
         }
 
+        public virtual void CloseNode()
+        {
+	        active = false;
+        }
+        
         private void NextNode()
         {
 	        NodePort port;

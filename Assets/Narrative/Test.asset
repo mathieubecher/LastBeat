@@ -49,7 +49,7 @@ MonoBehaviour:
         Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 1479432652932747704}
+        node: {fileID: 7053723623155730788}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -67,15 +67,11 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 1
-  input:
-    connected: 0
-  outputs:
-  - connected: 0
-  - connected: 0
+  outputs: []
   active: 0
   waiting: 1
-  dialogText: Je test les dialogues
   source: testdialog1
+  dialogText: Je test les dialogues
 --- !u!114 &-6095351589182064281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,6 +90,7 @@ MonoBehaviour:
     keys:
     - input
     - outputs
+    - outputs 0
     values:
     - _fieldName: input
       _node: {fileID: -6095351589182064281}
@@ -114,13 +111,23 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  input:
-    connected: 0
+    - _fieldName: outputs 0
+      _node: {fileID: -6095351589182064281}
+      _typeQualifiedName: NarrativeSystem.NarrativeSegment+Connection, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -5188123968641175146}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
   outputs: []
   active: 1
   waiting: 7
-  dialogText: Ceci est un test d'une autre branche
   source: testdialog0
+  dialogText: Ceci est un test d'une autre branche
 --- !u!114 &-5228591618844652772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,6 +147,7 @@ MonoBehaviour:
     - input
     - outputs
     - output 0
+    - outputs 0
     values:
     - _fieldName: input
       _node: {fileID: -5228591618844652772}
@@ -172,11 +180,79 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 1
-  input:
-    connected: 0
+    - _fieldName: outputs 0
+      _node: {fileID: -5228591618844652772}
+      _typeQualifiedName: NarrativeSystem.NarrativeSegment+Connection, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 4143828812003321438}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
   outputs: []
   active: 0
   subGraph: {fileID: 11400000, guid: 42eaec3cf85c1e04b848db4c993e2687, type: 2}
+--- !u!114 &-5188123968641175146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1885de26b9b017340889495700ea9c0d, type: 3}
+  m_Name: Audio Segment
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -808, y: 232}
+  ports:
+    keys:
+    - input
+    - outputs
+    - outputs 0
+    values:
+    - _fieldName: input
+      _node: {fileID: -5188123968641175146}
+      _typeQualifiedName: NarrativeSystem.NarrativeSegment+Connection, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: outputs 0
+        node: {fileID: -6095351589182064281}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: outputs
+      _node: {fileID: -5188123968641175146}
+      _typeQualifiedName: System.Collections.Generic.List`1[[NarrativeSystem.NarrativeSegment+Connection,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: outputs 0
+      _node: {fileID: -5188123968641175146}
+      _typeQualifiedName: NarrativeSystem.NarrativeSegment+Connection, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 4143828812003321438}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  outputs: []
+  active: 0
+  waiting: 0
+  source: testaudio0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,9 +272,13 @@ MonoBehaviour:
   - {fileID: 3143158614583022121}
   - {fileID: -6095351589182064281}
   - {fileID: -5228591618844652772}
+  - {fileID: -5188123968641175146}
+  - {fileID: 4143828812003321438}
+  - {fileID: 7053723623155730788}
   _actives:
   - {fileID: -6095351589182064281}
   _requestings: []
+  narrativeManager: {fileID: 0}
 --- !u!114 &1479432652932747704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,7 +292,7 @@ MonoBehaviour:
   m_Name: Sub Graph
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -312, y: -104}
+  position: {x: -136, y: 8}
   ports:
     keys:
     - input
@@ -225,7 +305,7 @@ MonoBehaviour:
         Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: outputs 0
-        node: {fileID: -7154260074155529136}
+        node: {fileID: 7053723623155730788}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -250,8 +330,6 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 1
-  input:
-    connected: 0
   outputs: []
   active: 0
   subGraph: {fileID: 11400000, guid: 42eaec3cf85c1e04b848db4c993e2687, type: 2}
@@ -309,14 +387,11 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 1
-  input:
-    connected: 0
-  outputs:
-  - connected: 0
+  outputs: []
   active: 0
   waiting: 2
-  dialogText: "Je test les dialogues deuxi\xE8me prise"
   source: testdialog2
+  dialogText: "Je test les dialogues deuxi\xE8me prise"
 --- !u!114 &3143158614583022121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,7 +405,7 @@ MonoBehaviour:
   m_Name: Listen Event Segment
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1080, y: -120}
+  position: {x: -1096, y: -120}
   ports:
     keys:
     - input
@@ -378,13 +453,115 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 1
-  input:
-    connected: 0
-  outputs:
-  - connected: 0
-  - connected: 0
+  outputs: []
   active: 0
   listener: 0
-  comparator: 0
+  comparator: 2
   value: 0
-  duration: 0
+  duration: 10
+  exitTime: 0
+--- !u!114 &4143828812003321438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1885de26b9b017340889495700ea9c0d, type: 3}
+  m_Name: Audio Segment
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -56, y: 344}
+  ports:
+    keys:
+    - input
+    - outputs
+    values:
+    - _fieldName: input
+      _node: {fileID: 4143828812003321438}
+      _typeQualifiedName: NarrativeSystem.NarrativeSegment+Connection, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: outputs 0
+        node: {fileID: -5228591618844652772}
+        reroutePoints: []
+      - fieldName: outputs 0
+        node: {fileID: -5188123968641175146}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: outputs
+      _node: {fileID: 4143828812003321438}
+      _typeQualifiedName: System.Collections.Generic.List`1[[NarrativeSystem.NarrativeSegment+Connection,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  outputs: []
+  active: 0
+  waiting: 0
+  source: testaudio1
+--- !u!114 &7053723623155730788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd84b2935dcab1444befcd124a7f754b, type: 3}
+  m_Name: Wait Segment
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -424, y: -72}
+  ports:
+    keys:
+    - input
+    - outputs
+    - outputs 0
+    values:
+    - _fieldName: input
+      _node: {fileID: 7053723623155730788}
+      _typeQualifiedName: NarrativeSystem.NarrativeSegment+Connection, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: outputs 0
+        node: {fileID: -7154260074155529136}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: outputs
+      _node: {fileID: 7053723623155730788}
+      _typeQualifiedName: System.Collections.Generic.List`1[[NarrativeSystem.NarrativeSegment+Connection,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: outputs 0
+      _node: {fileID: 7053723623155730788}
+      _typeQualifiedName: NarrativeSystem.NarrativeSegment+Connection, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 1479432652932747704}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  outputs: []
+  active: 0
+  duration: 1

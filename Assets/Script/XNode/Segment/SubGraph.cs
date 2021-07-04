@@ -19,15 +19,22 @@ namespace NarrativeSystem
 		{
 			base.InitNode(_graph);
 			Debug.Log("Start [ SubGraph ]");
-			_subGraphInstance = subGraph.Copy() as NarrativeGraph;
+			if (subGraph == null) return;
 			
-			_subGraphInstance.InitGraph();
+			_subGraphInstance = subGraph.Copy() as NarrativeGraph;
+			_subGraphInstance.InitGraph(((NarrativeGraph)graph).narrativeManager);
 		}
 
 
 		public override void UpdateNode()
 		{
 			base.UpdateNode();
+			if (subGraph == null)
+			{
+				EndNode();
+				return;
+			}
+			
 			_subGraphInstance.UpdateGraph();
 			
 			if(_subGraphInstance.Ended())

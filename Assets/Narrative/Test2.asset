@@ -57,8 +57,8 @@ MonoBehaviour:
   outputs: []
   active: 0
   waiting: 0
-  dialogText: "Je test les dialogues troisi\xE8me prise"
   source: testdialog1
+  dialogText: "Je test les dialogues troisi\xE8me prise"
 --- !u!114 &-5524973309273264576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,7 +115,8 @@ MonoBehaviour:
   listener: 0
   comparator: 1
   value: 5
-  duration: 0
+  duration: 1
+  exitTime: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,6 +135,7 @@ MonoBehaviour:
   - {fileID: 8556269871020411278}
   _actives: []
   _requestings: []
+  narrativeManager: {fileID: 0}
 --- !u!114 &8556269871020411278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,5 +180,5 @@ MonoBehaviour:
   outputs: []
   active: 0
   waiting: 0
-  dialogText: "Je test les dialogues quatri\xE8me prise"
   source: testdialog2
+  dialogText: "Je test les dialogues quatri\xE8me prise"
