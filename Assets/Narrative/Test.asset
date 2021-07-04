@@ -142,8 +142,7 @@ MonoBehaviour:
       _dynamic: 1
   outputs: []
   active: 1
-  motor: 0
-  type: 0
+  waiting: 7
   source: testdialog0
   sourcePEngine: {fileID: 0}
   actorId: Actor1
@@ -636,8 +635,7 @@ MonoBehaviour:
       _dynamic: 0
   outputs: []
   active: 0
-  motor: 0
-  type: 0
+  waiting: 0
   source: testaudio1
   sourcePEngine: {fileID: 0}
   actorId: Actor2
