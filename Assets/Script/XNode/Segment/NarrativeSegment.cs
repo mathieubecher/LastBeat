@@ -8,15 +8,15 @@ using XNodeEditor;
 
 namespace NarrativeSystem{
     public abstract class NarrativeSegment : Node {
-        
-        
-        [Serializable]
-        public struct Connection{}
+
+
+	    [Serializable]
+	    public struct Connection {}
         [Input] public Connection input;
         [Output(dynamicPortList = true)] public List<Connection> outputs;
 
         public bool active = false;
-        private NarrativeGraph graph;
+        private NarrativeGraph narrativeGraph;
         
         public virtual void ResetNode()
         {
@@ -25,7 +25,7 @@ namespace NarrativeSystem{
         public virtual void InitNode(NarrativeGraph _graph)
         {
 	        active = true;
-	        graph = _graph;
+	        narrativeGraph = _graph;
 
         }
         public virtual void UpdateNode()
@@ -40,13 +40,21 @@ namespace NarrativeSystem{
 
         private void NextNode()
         {
-	        for (int i = 0; i < outputs.Count; ++i)
+	        NodePort port;
+	        int i = 0;
+
+	        foreach (var fieldname in GetOutputPortsName ())
 	        {
-		        var port = GetPort("outputs " + i);
-		        if (port.IsConnected)
+		        if (fieldname != "outputs")
 		        {
-			        graph.RequestingNode(port.Connection.node as NarrativeSegment);
+			        port = GetOutputPort(fieldname);
+			        ++i;
+			        if (port != null && port.IsConnected)
+			        {
+				        narrativeGraph.RequestingNode(port.Connection.node as NarrativeSegment);
+			        } 
 		        }
+		        
 	        }
         }
         public override object GetValue(NodePort port)

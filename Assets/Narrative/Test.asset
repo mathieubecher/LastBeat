@@ -67,7 +67,11 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 1
-  outputs: []
+  input:
+    connected: 0
+  outputs:
+  - connected: 0
+  - connected: 0
   active: 0
   waiting: 1
   dialogText: Je test les dialogues
@@ -110,8 +114,10 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+  input:
+    connected: 0
   outputs: []
-  active: 0
+  active: 1
   waiting: 7
   dialogText: Ceci est un test d'une autre branche
   source: testdialog0
@@ -166,6 +172,8 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 1
+  input:
+    connected: 0
   outputs: []
   active: 0
   subGraph: {fileID: 11400000, guid: 42eaec3cf85c1e04b848db4c993e2687, type: 2}
@@ -188,7 +196,8 @@ MonoBehaviour:
   - {fileID: 3143158614583022121}
   - {fileID: -6095351589182064281}
   - {fileID: -5228591618844652772}
-  _actives: []
+  _actives:
+  - {fileID: -6095351589182064281}
   _requestings: []
 --- !u!114 &1479432652932747704
 MonoBehaviour:
@@ -241,6 +250,8 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 1
+  input:
+    connected: 0
   outputs: []
   active: 0
   subGraph: {fileID: 11400000, guid: 42eaec3cf85c1e04b848db4c993e2687, type: 2}
@@ -298,7 +309,10 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 1
-  outputs: []
+  input:
+    connected: 0
+  outputs:
+  - connected: 0
   active: 0
   waiting: 2
   dialogText: "Je test les dialogues deuxi\xE8me prise"
@@ -322,6 +336,7 @@ MonoBehaviour:
     - input
     - outputs
     - outputs 0
+    - outputs 1
     values:
     - _fieldName: input
       _node: {fileID: 3143158614583022121}
@@ -354,7 +369,20 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 1
-  outputs: []
+    - _fieldName: outputs 1
+      _node: {fileID: 3143158614583022121}
+      _typeQualifiedName: NarrativeSystem.NarrativeSegment+Connection, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  input:
+    connected: 0
+  outputs:
+  - connected: 0
+  - connected: 0
   active: 0
   listener: 0
   comparator: 0

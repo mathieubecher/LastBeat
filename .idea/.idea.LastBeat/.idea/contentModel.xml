@@ -220,16 +220,12 @@
             <e p="InputMaster.cs" t="Include" />
           </e>
           <e p="XNode" t="Include">
-            <e p="Dialog" t="Include">
-              <e p="DialogSegment.cs" t="Include" />
-            </e>
-            <e p="Event" t="Include">
-              <e p="ListenEventSegment.cs" t="Include" />
-            </e>
             <e p="NarrativeGraph.cs" t="Include" />
             <e p="NarrativeManager.cs" t="Include" />
-            <e p="NarrativeSegment.cs" t="Include" />
-            <e p="SubGraph" t="Include">
+            <e p="Segment" t="Include">
+              <e p="DialogSegment.cs" t="Include" />
+              <e p="ListenEventSegment.cs" t="Include" />
+              <e p="NarrativeSegment.cs" t="Include" />
               <e p="SubGraph.cs" t="Include" />
             </e>
           </e>

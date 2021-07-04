@@ -9,7 +9,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Script/XNode/NarrativeSegment.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/XNode/Segment/ListenEventSegment.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/xNode-examples/Examples/LogicToy/Editor/LogicNodeEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/xNode-master/Scripts/Editor/NodeEditorAction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/XNode/NarrativeGraph.cs" root0="FORCE_HIGHLIGHTING" />
@@ -19,12 +19,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/Script/XNode/NarrativeManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/xNode-examples/Examples/LogicToy/Nodes/ToggleNode.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Cardiogram/Cardiogram.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/xNode-master/Scripts/Node.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Cardiogram/Line.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/xNode-examples/Examples/LogicToy/LogicGraph.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Script/XNode/Dialog/DialogSegment.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Script/XNode/SubGraph/SubGraph.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Script/XNode/Event/ListenEventSegment.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/xNode-master/Scripts/NodeGraph.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/XNode/Segment/NarrativeSegment.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -40,11 +39,13 @@
         <option value="$PROJECT_DIR$/Assets/Script/XNode/GraphSegment.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/XNode/Dialog/DialogNodeEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/XNode/NarrativeManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/XNode/NarrativeGraph.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/XNode/Dialog/DialogSegment.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/XNode/Event/ListenEventSegment.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/XNode/SubGraph/SubGraph.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/XNode/NarrativeSegment.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/XNode/NarrativeGraph.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/xNode-master/Scripts/Node.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/XNode/Segment/NarrativeSegment.cs" />
       </list>
     </option>
   </component>
@@ -80,7 +81,9 @@
       <workItem from="1625071445827" duration="4708000" />
       <workItem from="1625171515129" duration="2449000" />
       <workItem from="1625244255341" duration="7922000" />
-      <workItem from="1625298747638" duration="26614000" />
+      <workItem from="1625298747638" duration="27212000" />
+      <workItem from="1625390714761" duration="1248000" />
+      <workItem from="1625394248403" duration="2285000" />
     </task>
     <servers />
   </component>

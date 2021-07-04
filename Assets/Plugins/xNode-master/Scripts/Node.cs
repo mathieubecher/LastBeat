@@ -217,6 +217,17 @@ namespace XNode {
             else return null;
         }
 
+        public List<string> GetOutputPortsName()
+        {
+            List<string> fieldNames = new List<string>();
+            foreach (var port in ports)
+            {
+                if(port.Value.direction == NodePort.IO.Output)
+                    fieldNames.Add(port.Key);
+            }
+
+            return fieldNames;
+        }
         public bool HasPort(string fieldName) {
             return ports.ContainsKey(fieldName);
         }
