@@ -37,7 +37,6 @@ public class Controller : MonoBehaviour
             {
                 ++count;
             }
-            Debug.Log(count / duration);
             return count / duration;
         }
 }
