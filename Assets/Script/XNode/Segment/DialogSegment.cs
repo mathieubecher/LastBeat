@@ -28,11 +28,12 @@ namespace NarrativeSystem
     
     #region EDITOR
     [NodeEditor.CustomNodeEditorAttribute(typeof(DialogSegment))]
-    public class DialogSegmentEditor : NarrativeSegmentEditor
+    public class DialogSegmentEditor : AudioSegmentEditor
     {
         public override void Body(NarrativeSegment segment)
         {
             base.Body(segment);
+            GUILayout.Space(10);
             var dialog = (DialogSegment)segment;
             GUILayout.Label("Dialog Text");
             dialog.dialogText = GUILayout.TextArea(dialog.dialogText, new GUILayoutOption[]

@@ -8,6 +8,24 @@ using XNodeEditor;
 
 namespace NarrativeSystem
 {
+    public enum Motor
+    {
+        FMOD,
+        PENGINE
+    }
+
+    public enum PlayingType
+    {
+        ONESHOT,
+        LOOP
+    }
+    
+    public enum Target
+    {
+        LOCAL,
+        GLOBAL
+    }
+    
     public class NarrativeManager : MonoBehaviour
     {
         [SerializeField] private NarrativeGraph _narrativeGraph;

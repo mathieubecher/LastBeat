@@ -11,6 +11,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/xNode-examples/Examples/LogicToy/Editor/LogicNodeEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/xNode-examples/Examples/LogicToy/Nodes/PulseNode.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/XNode/Segment/ParameterSegment.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/xNode-examples/Examples/LogicToy/Nodes/LogicNode.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/xNode-examples/Examples/LogicToy/Nodes/ToggleNode.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/xNode-master/Scripts/Editor/RenamePopup.cs" root0="FORCE_HIGHLIGHTING" />
@@ -26,6 +27,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Script/XNode/Segment/NarrativeSegment.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/xNode-examples/Examples/StateMachine/Nodes/StateNode.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/XNode/Segment/ListenEventSegment.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/xNode-master/Scripts/Editor/NodeEditorBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/XNode/Segment/DialogSegment.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/xNode-master/Scripts/Editor/NodeEditorAction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/XNode/NarrativeGraph.cs" root0="FORCE_HIGHLIGHTING" />
@@ -60,13 +62,15 @@
         <option value="$PROJECT_DIR$/Assets/Script/XNode/Segment/SubGraph.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/XNode/Segment/WaitSegment.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Cardiogram/Controller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/XNode/Segment/GoToSegment.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/XNode/NarrativeGraph.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Narrative/NarrativeActor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Narrative/NarrativeManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/XNode/Segment/DialogSegment.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/XNode/Segment/SetParameterSegment.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Narrative/NarrativeManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/XNode/Segment/NarrativeSegment.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/XNode/Segment/AudioSegment.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/XNode/Segment/GoToSegment.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Narrative/NarrativeActor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/XNode/Segment/ParameterSegment.cs" />
       </list>
     </option>
   </component>
@@ -104,7 +108,8 @@
       <workItem from="1625244255341" duration="7922000" />
       <workItem from="1625298747638" duration="27212000" />
       <workItem from="1625390714761" duration="1248000" />
-      <workItem from="1625394248403" duration="16230000" />
+      <workItem from="1625394248403" duration="16347000" />
+      <workItem from="1625419073204" duration="10288000" />
     </task>
     <servers />
   </component>

@@ -10,9 +10,19 @@ namespace NarrativeSystem
     {
     [NodeTint(100,70,100)]
     public class AudioSegment : NarrativeSegment {
-        public float waiting;
+
+        public Motor motor = Motor.FMOD;
+        public PlayingType type = PlayingType.ONESHOT;
+        
+        [FMODUnity.EventRef]
         public string source;
+        
+        public EventSO sourcePEngine;
+        
         public string actorId;
+        
+        public float waiting;
+
         protected float _timer = 0.0f;
         protected float _waitingTimer = 0.0f;
         
@@ -25,9 +35,10 @@ namespace NarrativeSystem
 
         public override void InitNode(NarrativeGraph _graph)
         {
-            Debug.Log("Start [ " + source + " ]");
+            Debug.Log("Start [ AudioSegment ]");
             base.InitNode(_graph);
-            _timer = 3.0f;
+            _timer = 0.0f;
+            if (type == PlayingType.ONESHOT) _timer = 3.0f;
             _waitingTimer = waiting;
         }
 
@@ -59,14 +70,16 @@ namespace NarrativeSystem
                 Debug.LogError("Actor "+actorId+ " doesn't exit");
                 return;
             }
-            actor.PlaySource(source);
+            if(motor == Motor.FMOD) actor.PlaySource(source, type);
+            else actor.PlaySourcePEngine(sourcePEngine, type);
+            
         }
         
         
         public override void EndNode()
         {
             base.EndNode();
-            Debug.Log("End [ "+source+" ]");
+            Debug.Log("End [ AudioSegment ]");
         }
     }
 
@@ -83,8 +96,19 @@ namespace NarrativeSystem
 
             audio.waiting = EditorGUILayout.FloatField("Waiting", audio.waiting);
             GUILayout.Space(10);
+            
             audio.actorId = EditorGUILayout.TextField("Actor ID", audio.actorId);
-            audio.source = EditorGUILayout.TextField("Source", audio.source);
+            audio.motor = (Motor)EditorGUILayout.EnumPopup("Motor", audio.motor);
+            if (audio.motor == Motor.FMOD)
+            {
+                audio.source = EditorGUILayout.TextField("Source", audio.source);
+            }
+            else
+            {
+                audio.sourcePEngine = (EventSO) EditorGUILayout.ObjectField("Source", audio.sourcePEngine, typeof(EventSO));
+                
+            }
+            audio.type = (PlayingType)EditorGUILayout.EnumPopup("Type", audio.type);
         }
     }
     #endregion

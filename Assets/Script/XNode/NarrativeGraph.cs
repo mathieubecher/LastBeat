@@ -15,8 +15,6 @@ namespace NarrativeSystem
 
 		[HideInInspector] public NarrativeManager narrativeManager;
 
-		private NodeEditorWindow main;
-
 		public void InitGraph(NarrativeManager manager)
 		{
 			_requestings = new List<NarrativeSegment>();
@@ -58,8 +56,8 @@ namespace NarrativeSystem
 				}
 			}
 
-			if (refreshGraph && main != null) 
-				main.Repaint();
+			if (refreshGraph && NodeEditorWindow.current != null) 
+				NodeEditorWindow.current.Repaint();
 
 			_requestings = new List<NarrativeSegment>();
 			

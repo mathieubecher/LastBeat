@@ -13,7 +13,7 @@ namespace NarrativeSystem
 	{
 		public float waiting;
 		public string actorId;
-		public string position;
+		public string pos;
 		public float duration;
 		protected float _waitingTimer = 0.0f;
 		protected float _timer = 0.0f;
@@ -74,7 +74,7 @@ namespace NarrativeSystem
 			goTo.waiting = EditorGUILayout.FloatField("Waiting", goTo.waiting);
 			GUILayout.Space(10);
 			goTo.actorId = EditorGUILayout.TextField("Actor ID", goTo.actorId);
-			goTo.position = EditorGUILayout.TextField("GoTo", goTo.position);
+			goTo.pos = EditorGUILayout.TextField("GoTo", goTo.pos);
 			goTo.duration = EditorGUILayout.FloatField("Duration", goTo.duration);
 		}
 	}

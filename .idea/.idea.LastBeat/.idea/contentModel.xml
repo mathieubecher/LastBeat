@@ -231,6 +231,7 @@
               <e p="GoToSegment.cs" t="Include" />
               <e p="ListenEventSegment.cs" t="Include" />
               <e p="NarrativeSegment.cs" t="Include" />
+              <e p="ParameterSegment.cs" t="Include" />
               <e p="SubGraph.cs" t="Include" />
               <e p="WaitSegment.cs" t="Include" />
             </e>

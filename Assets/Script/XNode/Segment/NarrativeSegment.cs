@@ -97,7 +97,6 @@ namespace NarrativeSystem{
 		    NarrativeSegment segment = serializedObject.targetObject as NarrativeSegment;
 		    NodeEditorGUILayout.PortField(segment.GetPort("input"));
 		    GUILayout.Space(10);
-		    
 		    Body(segment);
 		    GUILayout.Space(10);
 		    
