@@ -125,7 +125,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 1
   outputs: []
-  active: 0
+  active: 1
   waiting: 7
   source: testdialog0
   actorId: Actor1
@@ -195,7 +195,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 1
   outputs: []
-  active: 1
+  active: 0
   subGraph: {fileID: 11400000, guid: 42eaec3cf85c1e04b848db4c993e2687, type: 2}
 --- !u!114 &-5188123968641175146
 MonoBehaviour:
@@ -279,9 +279,8 @@ MonoBehaviour:
   - {fileID: 4143828812003321438}
   - {fileID: 7053723623155730788}
   _actives:
-  - {fileID: 1479432652932747704}
-  - {fileID: -5228591618844652772}
-  - {fileID: 4143828812003321438}
+  - {fileID: 3143158614583022121}
+  - {fileID: -6095351589182064281}
   _requestings: []
   narrativeManager: {fileID: 0}
 --- !u!114 &1479432652932747704
@@ -336,7 +335,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 1
   outputs: []
-  active: 1
+  active: 0
   subGraph: {fileID: 11400000, guid: 42eaec3cf85c1e04b848db4c993e2687, type: 2}
 --- !u!114 &2228536541450329766
 MonoBehaviour:
@@ -460,7 +459,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 1
   outputs: []
-  active: 0
+  active: 1
   listener: 0
   comparator: 1
   value: 5
@@ -511,7 +510,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   outputs: []
-  active: 1
+  active: 0
   waiting: 0
   source: testaudio1
   actorId: Actor2
