@@ -33,11 +33,11 @@ public class Controller : MonoBehaviour
             if (duration == 0) return 0.0f;
             int count = 0;
             float time = Time.time;
-            while (_beatHistory.Count > count && _beatHistory[_beatHistory.Count - count - 1] >= time)
+            while (_beatHistory.Count > count && _beatHistory[_beatHistory.Count - count - 1] >= time -duration)
             {
                 ++count;
             }
-
+            Debug.Log(count / duration);
             return count / duration;
         }
 }

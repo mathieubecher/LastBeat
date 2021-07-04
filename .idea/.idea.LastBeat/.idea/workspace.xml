@@ -55,13 +55,13 @@
         <option value="$PROJECT_DIR$/Assets/Plugins/xNode-master/Scripts/Node.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/XNode/Segment/NarrativeSegment.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/XNode/NarrativeManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Cardiogram/Controller.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/XNode/Segment/ListenEventSegment.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/XNode/Segment/AudioSegment.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/XNode/Segment/DialogSegment.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/XNode/Segment/SubGraph.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/XNode/Segment/WaitSegment.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/XNode/NarrativeGraph.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Cardiogram/Controller.cs" />
       </list>
     </option>
   </component>
@@ -99,7 +99,7 @@
       <workItem from="1625244255341" duration="7922000" />
       <workItem from="1625298747638" duration="27212000" />
       <workItem from="1625390714761" duration="1248000" />
-      <workItem from="1625394248403" duration="11609000" />
+      <workItem from="1625394248403" duration="11875000" />
     </task>
     <servers />
   </component>
