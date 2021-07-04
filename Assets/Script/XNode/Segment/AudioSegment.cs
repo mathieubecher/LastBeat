@@ -12,6 +12,7 @@ namespace NarrativeSystem
     public class AudioSegment : NarrativeSegment {
         public float waiting;
         public string source;
+        public string actorId;
         protected float _timer = 0.0f;
         protected float _waitingTimer = 0.0f;
         
@@ -24,6 +25,7 @@ namespace NarrativeSystem
 
         public override void InitNode(NarrativeGraph _graph)
         {
+            Debug.Log("Start [ " + source + " ]");
             base.InitNode(_graph);
             _timer = 3.0f;
             _waitingTimer = waiting;
@@ -51,7 +53,13 @@ namespace NarrativeSystem
         
         public virtual void Play()
         {
-            Debug.Log("Start [ " + source + " ]");
+            NarrativeActor actor = ((NarrativeGraph) graph).narrativeManager.GetActor(actorId);
+            if (actor == null)
+            {
+                Debug.LogError("Actor "+actorId+ " doesn't exit");
+                return;
+            }
+            actor.PlaySource(source);
         }
         
         
@@ -74,6 +82,7 @@ namespace NarrativeSystem
             var audio = (AudioSegment)segment;
 
             audio.waiting = EditorGUILayout.FloatField("Waiting", audio.waiting);
+            audio.actorId = EditorGUILayout.TextField("Actor ID", audio.actorId);
             audio.source = EditorGUILayout.TextField("Source", audio.source);
         }
     }

@@ -13,7 +13,9 @@ namespace NarrativeSystem
 		[SerializeField] private List<NarrativeSegment> _actives;
 		[SerializeField] private List<NarrativeSegment> _requestings;
 
-		[HideInInspector] public NarrativeManager narrativeManager; 
+		[HideInInspector] public NarrativeManager narrativeManager;
+
+		private NodeEditorWindow main;
 
 		public void InitGraph(NarrativeManager manager)
 		{
@@ -55,7 +57,10 @@ namespace NarrativeSystem
 					refreshGraph = true;
 				}
 			}
-			if(refreshGraph) NodeEditorWindow.current.Repaint();
+
+			if (refreshGraph && main != null) 
+				main.Repaint();
+
 			_requestings = new List<NarrativeSegment>();
 			
 			foreach (NarrativeSegment node in _actives)

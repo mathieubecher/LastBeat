@@ -219,9 +219,12 @@
           <e p="InputManager" t="Include">
             <e p="InputMaster.cs" t="Include" />
           </e>
+          <e p="Narrative" t="Include">
+            <e p="NarrativeActor.cs" t="Include" />
+            <e p="NarrativeManager.cs" t="Include" />
+          </e>
           <e p="XNode" t="Include">
             <e p="NarrativeGraph.cs" t="Include" />
-            <e p="NarrativeManager.cs" t="Include" />
             <e p="Segment" t="Include">
               <e p="AudioSegment.cs" t="Include" />
               <e p="DialogSegment.cs" t="Include" />

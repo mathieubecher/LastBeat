@@ -27,16 +27,15 @@ public class Controller : MonoBehaviour
 
     }
 
-    
-        public float Frequency(float duration)
+    public float Frequency(float duration)
+    {
+        if (duration == 0) return 0.0f;
+        int count = 0;
+        float time = Time.time;
+        while (_beatHistory.Count > count && _beatHistory[_beatHistory.Count - count - 1] >= time -duration)
         {
-            if (duration == 0) return 0.0f;
-            int count = 0;
-            float time = Time.time;
-            while (_beatHistory.Count > count && _beatHistory[_beatHistory.Count - count - 1] >= time -duration)
-            {
-                ++count;
-            }
-            return count / duration;
+            ++count;
         }
+        return count / duration;
+    }
 }

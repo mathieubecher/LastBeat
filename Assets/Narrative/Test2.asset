@@ -58,6 +58,7 @@ MonoBehaviour:
   active: 0
   waiting: 0
   source: testdialog1
+  actorId: Actor1
   dialogText: "Je test les dialogues troisi\xE8me prise"
 --- !u!114 &-5524973309273264576
 MonoBehaviour:
@@ -181,4 +182,5 @@ MonoBehaviour:
   active: 0
   waiting: 0
   source: testdialog2
+  actorId: Actor1
   dialogText: "Je test les dialogues quatri\xE8me prise"

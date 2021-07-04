@@ -71,6 +71,7 @@ MonoBehaviour:
   active: 0
   waiting: 1
   source: testdialog1
+  actorId: Actor2
   dialogText: Je test les dialogues
 --- !u!114 &-6095351589182064281
 MonoBehaviour:
@@ -127,6 +128,7 @@ MonoBehaviour:
   active: 0
   waiting: 7
   source: testdialog0
+  actorId: Actor1
   dialogText: Ceci est un test d'une autre branche
 --- !u!114 &-5228591618844652772
 MonoBehaviour:
@@ -193,7 +195,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 1
   outputs: []
-  active: 0
+  active: 1
   subGraph: {fileID: 11400000, guid: 42eaec3cf85c1e04b848db4c993e2687, type: 2}
 --- !u!114 &-5188123968641175146
 MonoBehaviour:
@@ -253,6 +255,7 @@ MonoBehaviour:
   active: 0
   waiting: 0
   source: testaudio0
+  actorId: Actor1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,8 +279,9 @@ MonoBehaviour:
   - {fileID: 4143828812003321438}
   - {fileID: 7053723623155730788}
   _actives:
-  - {fileID: 2228536541450329766}
   - {fileID: 1479432652932747704}
+  - {fileID: -5228591618844652772}
+  - {fileID: 4143828812003321438}
   _requestings: []
   narrativeManager: {fileID: 0}
 --- !u!114 &1479432652932747704
@@ -389,9 +393,10 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 1
   outputs: []
-  active: 1
+  active: 0
   waiting: 2
   source: testdialog2
+  actorId: Actor1
   dialogText: "Je test les dialogues deuxi\xE8me prise"
 --- !u!114 &3143158614583022121
 MonoBehaviour:
@@ -506,9 +511,10 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   outputs: []
-  active: 0
+  active: 1
   waiting: 0
   source: testaudio1
+  actorId: Actor2
 --- !u!114 &7053723623155730788
 MonoBehaviour:
   m_ObjectHideFlags: 0

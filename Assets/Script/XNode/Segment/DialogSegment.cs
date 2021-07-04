@@ -14,9 +14,14 @@ namespace NarrativeSystem
     {
         public string dialogText;
 
+        public override void InitNode(NarrativeGraph _graph)
+        {
+            base.InitNode(_graph);
+        }
         public override void Play()
         {
-            Debug.Log("Start [ "+dialogText+" ]");
+            base.Play();
+            Debug.Log("[ "+dialogText+" ]");
         }
     }
     
@@ -30,6 +35,7 @@ namespace NarrativeSystem
             var dialog = (DialogSegment)segment;
 
             dialog.waiting = EditorGUILayout.FloatField("Waiting", dialog.waiting);
+            dialog.actorId = EditorGUILayout.TextField("Actor ID", dialog.actorId);
             dialog.source = EditorGUILayout.TextField("Source", dialog.source);
             GUILayout.Label("Dialog Text");
             dialog.dialogText = GUILayout.TextArea(dialog.dialogText, new GUILayoutOption[]
