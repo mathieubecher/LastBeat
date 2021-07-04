@@ -70,7 +70,7 @@ namespace NarrativeSystem{
     #region EDITOR
 
     [NodeEditor.CustomNodeEditorAttribute(typeof(NarrativeSegment))]
-    public class NarrativeSegmentEditor : NodeEditor
+    public abstract class NarrativeSegmentEditor : NodeEditor
     {
 	    public override void OnHeaderGUI() {
 		    // Initialization
@@ -84,7 +84,29 @@ namespace NarrativeSystem{
 		    GUI.DrawTexture(dotRect, NodeEditorResources.dot);
 		    GUI.color = Color.white;
 	    }
-	    
+
+	    public override void OnBodyGUI()
+	    {
+		    serializedObject.Update();
+            
+		    NarrativeSegment segment = serializedObject.targetObject as NarrativeSegment;
+		    NodeEditorGUILayout.PortField(segment.GetPort("input"));
+		    GUILayout.Space(10);
+		    
+		    Body(segment);
+		    GUILayout.Space(10);
+		    
+		    NodeEditorGUILayout.DynamicPortList(
+			    "outputs",
+			    typeof(float),
+			    serializedObject,
+			    NodePort.IO.Input,
+			    Node.ConnectionType.Override,
+			    Node.TypeConstraint.None);
+		    serializedObject.ApplyModifiedProperties();
+	    }
+
+	    public abstract void Body(NarrativeSegment segment);
     }
     #endregion
     

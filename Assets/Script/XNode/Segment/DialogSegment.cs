@@ -56,34 +56,17 @@ namespace NarrativeSystem
     [NodeEditor.CustomNodeEditorAttribute(typeof(DialogSegment))]
     public class DialogSegmentEditor : NarrativeSegmentEditor
     {
-        public override void OnBodyGUI()
+        public override void Body(NarrativeSegment segment)
         {
-            serializedObject.Update();
-            
-            var segment = serializedObject.targetObject as DialogSegment;
-            NodeEditorGUILayout.PortField(segment.GetPort("input"));
-            
-            GUILayout.Space(10);
+            var dialog = (DialogSegment)segment;
 
-            segment.waiting = EditorGUILayout.FloatField("Waiting", segment.waiting);
-            segment.source = EditorGUILayout.TextField("Source", segment.source);
+            dialog.waiting = EditorGUILayout.FloatField("Waiting", dialog.waiting);
+            dialog.source = EditorGUILayout.TextField("Source", dialog.source);
             GUILayout.Label("Dialog Text");
-            segment.dialogText = GUILayout.TextArea(segment.dialogText, new GUILayoutOption[]
+            dialog.dialogText = GUILayout.TextArea(dialog.dialogText, new GUILayoutOption[]
             {
                 GUILayout.MinHeight(50),
             });
-            
-            GUILayout.Space(10);
-            NodeEditorGUILayout.DynamicPortList(
-                "outputs",
-                typeof(float),
-                serializedObject,
-                NodePort.IO.Input,
-                Node.ConnectionType.Override,
-                Node.TypeConstraint.None);
-            
-            
-            serializedObject.ApplyModifiedProperties();
         }
     }
     #endregion

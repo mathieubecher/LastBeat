@@ -58,31 +58,13 @@ namespace NarrativeSystem
 	[NodeEditor.CustomNodeEditorAttribute(typeof(ListenEventSegment))]
 	public class ListenEventSegmentEditor : NarrativeSegmentEditor
 	{
-		public override void OnBodyGUI()
+		public override void Body(NarrativeSegment segment)
 		{
-			serializedObject.Update();
-            
-			var segment = serializedObject.targetObject as ListenEventSegment;
-			NodeEditorGUILayout.PortField(segment.GetPort("input"));
-            
-			GUILayout.Space(10);
-
-			segment.listener = (ListenEventSegment.Listener) EditorGUILayout.EnumPopup("Listener", segment.listener);
-			segment.comparator = (ListenEventSegment.Comparator) EditorGUILayout.EnumPopup("Comparator", segment.comparator);
-			segment.value = EditorGUILayout.FloatField("Value", segment.value);
-			segment.duration = EditorGUILayout.FloatField("Duration", segment.duration);
-				
-			GUILayout.Space(10);
-			NodeEditorGUILayout.DynamicPortList(
-				"outputs",
-				typeof(float),
-				serializedObject,
-				NodePort.IO.Input,
-				Node.ConnectionType.Override,
-				Node.TypeConstraint.None);
-            
-            
-			serializedObject.ApplyModifiedProperties();
+			var listenEvent = (ListenEventSegment) segment; 
+			listenEvent.listener = (ListenEventSegment.Listener) EditorGUILayout.EnumPopup("Listener", listenEvent.listener);
+			listenEvent.comparator = (ListenEventSegment.Comparator) EditorGUILayout.EnumPopup("Comparator", listenEvent.comparator);
+			listenEvent.value = EditorGUILayout.FloatField("Value", listenEvent.value);
+			listenEvent.duration = EditorGUILayout.FloatField("Duration", listenEvent.duration);
 		}
 	}
 	#endregion

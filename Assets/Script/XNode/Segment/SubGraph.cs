@@ -50,27 +50,10 @@ namespace NarrativeSystem
 	[NodeEditor.CustomNodeEditorAttribute(typeof(SubGraph))]
 	public class SubGraphEditor : NarrativeSegmentEditor
 	{
-		public override void OnBodyGUI()
+		public override void Body(NarrativeSegment segment)
 		{
-			serializedObject.Update();
-
-			var segment = serializedObject.targetObject as SubGraph;
-			NodeEditorGUILayout.PortField(segment.GetPort("input"));
-
-			GUILayout.Space(10);
-
-			segment.subGraph = EditorGUILayout.ObjectField("Graph", segment.subGraph, typeof(NarrativeGraph)) as NarrativeGraph;
-
-			GUILayout.Space(10);
-			NodeEditorGUILayout.DynamicPortList(
-				"outputs",
-				typeof(float),
-				serializedObject,
-				NodePort.IO.Input,
-				Node.ConnectionType.Override,
-				Node.TypeConstraint.None);
-
-			serializedObject.ApplyModifiedProperties();
+			var subGraph = (SubGraph) segment;
+			subGraph.subGraph = EditorGUILayout.ObjectField("Graph", subGraph.subGraph, typeof(NarrativeGraph)) as NarrativeGraph;
 		}
 	}
 	#endregion
