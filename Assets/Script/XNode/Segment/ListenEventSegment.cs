@@ -102,7 +102,7 @@ namespace NarrativeSystem
 			listenEvent.value = EditorGUILayout.FloatField("Value", listenEvent.value);
 			listenEvent.duration = EditorGUILayout.FloatField("Duration", listenEvent.duration);
 			
-			GUILayout.Space(10);
+			GUILayout.Space(EDITOR_SPACING);
 			
 			listenEvent.exitTime = EditorGUILayout.FloatField("Exit Time", listenEvent.exitTime);
 		}

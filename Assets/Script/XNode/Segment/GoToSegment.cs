@@ -80,11 +80,11 @@ namespace NarrativeSystem
 			var goTo = (GoToSegment) segment;
 
 			goTo.waiting = EditorGUILayout.FloatField("Waiting", goTo.waiting);
-			GUILayout.Space(10);
+			GUILayout.Space(EDITOR_SPACING);
 			goTo.actorId = EditorGUILayout.TextField("Actor ID", goTo.actorId);
 			goTo.duration = EditorGUILayout.FloatField("Duration", goTo.duration);
 
-			GUILayout.Space(10);
+			GUILayout.Space(EDITOR_SPACING);
 			int width = GetWidth() - GetBodyStyle().padding.horizontal ;
 			int height = width * image.height / image.width;
 			GUILayout.Box(image, GUILayout.Width(width), GUILayout.Height(height));
@@ -96,10 +96,10 @@ namespace NarrativeSystem
 			if ((Event.current.button == 0) && (Event.current.type == EventType.MouseDown) && 
 			    (pos.x >= 0 && pos.x < width && pos.y >= 0 && pos.y < height))
 			{
-				dotPos = pos;
+				
 				goTo.pos = new Vector2(pos.x/width, pos.y/height);
 			}
-			
+			dotPos = new Vector2(goTo.pos.x * width, goTo.pos.y * height);
 			Rect dotRect = GUILayoutUtility.GetLastRect();
 			dotRect.size = new Vector2(10, 10);
 			dotRect.position = dotPos + rect.position - new Vector2(5,10);

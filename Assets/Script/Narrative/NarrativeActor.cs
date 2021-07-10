@@ -12,15 +12,10 @@ public class NarrativeActor : MonoBehaviour
         
     }
 
-    public void PlaySource(string source, PlayingType type)
+    public float PlaySource(string source, PlayingType type)
     {
         Debug.LogFormat("Play " + source + " FMod");
-    }
-
-    public void PlaySourcePEngine(EventSO source, PlayingType type)
-    {
-        Debug.LogFormat("Play " + source + " PEngine");
-    
+        return 3;
     }
 
     public void SetParameter(string parameter, float value, Target target, string eventFMod = "")
@@ -29,9 +24,4 @@ public class NarrativeActor : MonoBehaviour
         
     }
 
-    public void SetParameterPEngine(EventSO parameter, float value, Target target)
-    {
-        Debug.LogFormat("Play " + parameter + " PEngine");
-    
-    }
 }

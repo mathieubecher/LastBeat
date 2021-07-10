@@ -69,15 +69,14 @@ namespace NarrativeSystem{
 
     }
 
-    
-    
-	
     #region EDITOR
 
     [NodeEditor.CustomNodeEditorAttribute(typeof(NarrativeSegment))]
     public abstract class NarrativeSegmentEditor : NodeEditor
     {
 	    private bool _foldout = true;
+	    protected static float EDITOR_SPACING = 10;
+	    
 	    public override void OnHeaderGUI() {
 		    // Initialization
 		    var segment = serializedObject.targetObject as NarrativeSegment;

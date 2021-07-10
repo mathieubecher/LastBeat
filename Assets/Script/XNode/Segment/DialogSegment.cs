@@ -33,7 +33,7 @@ namespace NarrativeSystem
         public override void Body(NarrativeSegment segment)
         {
             base.Body(segment);
-            GUILayout.Space(10);
+            GUILayout.Space(EDITOR_SPACING);
             var dialog = (DialogSegment)segment;
             GUILayout.Label("Dialog Text");
             dialog.dialogText = GUILayout.TextArea(dialog.dialogText, new GUILayoutOption[]

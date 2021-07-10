@@ -8,7 +8,6 @@ namespace NarrativeSystem
 {
     public class ParameterSegment : NarrativeSegment
     {
-        public Motor motor = Motor.FMOD;
         public Target target = Target.GLOBAL;
         
         [FMODUnity.EventRef]
@@ -23,7 +22,6 @@ namespace NarrativeSystem
         
         [FMODUnity.EventRef]
         public string parameter;
-        public EventSO parameterPEngine;
         public float value;
         
         
@@ -41,13 +39,13 @@ namespace NarrativeSystem
                 _waitingTimer -= Time.deltaTime;
                 if (_waitingTimer < 0)
                 {
-                    Play();
+                    SendParameter();
                     EndNode();
                 }
             }
         }
 
-        private void Play()
+        private void SendParameter()
         {
             NarrativeActor actor = ((NarrativeGraph) graph).narrativeManager.GetActor(actorId);
             if (actor == null)
@@ -55,8 +53,7 @@ namespace NarrativeSystem
                 Debug.LogError("Actor "+actorId+ " doesn't exit");
                 return;
             }
-            if(motor == Motor.FMOD) actor.SetParameter(parameter, value, target, eventFMod);
-            else actor.SetParameterPEngine(parameterPEngine, value, target);
+            actor.SetParameter(parameter, value, target, eventFMod);
         }
         
         public override void EndNode()
@@ -77,24 +74,17 @@ namespace NarrativeSystem
             var parameter = (ParameterSegment)segment;
             
             parameter.waiting = EditorGUILayout.FloatField("Waiting", parameter.waiting);
-            GUILayout.Space(10);
+            GUILayout.Space(EDITOR_SPACING);
             
             parameter.actorId = EditorGUILayout.TextField("Actor ID", parameter.actorId);
-            parameter.motor = (Motor)EditorGUILayout.EnumPopup("Motor", parameter.motor);
             parameter.target = (Target)EditorGUILayout.EnumPopup("Target", parameter.target);
-            if (parameter.motor == Motor.FMOD && parameter.target == Target.LOCAL)
+            if (parameter.target == Target.LOCAL)
             {    
                 parameter.eventFMod = EditorGUILayout.TextField("Event", parameter.eventFMod);
             }
-            GUILayout.Space(10);
-            if (parameter.motor == Motor.FMOD)
-            {    
-                parameter.parameter = EditorGUILayout.TextField("Parameter", parameter.parameter);
-            }
-            else
-            {
-                parameter.parameterPEngine = (EventSO) EditorGUILayout.ObjectField("Source", parameter.parameterPEngine, typeof(EventSO));
-            }
+            GUILayout.Space(EDITOR_SPACING);
+            parameter.parameter = EditorGUILayout.TextField("Parameter", parameter.parameter);
+            
             parameter.value = EditorGUILayout.FloatField("Value", parameter.value);
 
         }

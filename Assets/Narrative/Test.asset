@@ -69,10 +69,8 @@ MonoBehaviour:
       _dynamic: 1
   outputs: []
   active: 0
-  motor: 0
   type: 0
   source: testdialog1
-  sourcePEngine: {fileID: 0}
   actorId: Actor2
   waiting: 1
   dialogText: Je test les dialogues
@@ -142,10 +140,8 @@ MonoBehaviour:
       _dynamic: 1
   outputs: []
   active: 1
-  motor: 0
   type: 0
   source: testdialog0
-  sourcePEngine: {fileID: 0}
   actorId: Actor1
   waiting: 7
   dialogText: Ceci est un test d'une autre branche
@@ -272,10 +268,8 @@ MonoBehaviour:
       _dynamic: 1
   outputs: []
   active: 0
-  motor: 0
   type: 0
   source: testaudio0
-  sourcePEngine: {fileID: 0}
   actorId: Actor1
   waiting: 0
 --- !u!114 &-4732060650757480546
@@ -366,13 +360,11 @@ MonoBehaviour:
       _dynamic: 0
   outputs: []
   active: 0
-  motor: 0
   target: 1
   eventFMod: 
   actorId: Actor1
   waiting: 0
   parameter: Test
-  parameterPEngine: {fileID: 0}
   value: 0
 --- !u!114 &11400000
 MonoBehaviour:
@@ -526,10 +518,8 @@ MonoBehaviour:
       _dynamic: 1
   outputs: []
   active: 0
-  motor: 0
   type: 0
   source: testdialog2
-  sourcePEngine: {fileID: 0}
   actorId: Actor1
   waiting: 2
   dialogText: "Je test les dialogues deuxi\xE8me prise"
@@ -637,10 +627,8 @@ MonoBehaviour:
       _dynamic: 0
   outputs: []
   active: 0
-  motor: 0
   type: 0
   source: testaudio1
-  sourcePEngine: {fileID: 0}
   actorId: Actor2
   waiting: 0
 --- !u!114 &7053723623155730788

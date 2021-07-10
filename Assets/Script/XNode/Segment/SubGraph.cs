@@ -61,6 +61,27 @@ namespace NarrativeSystem
 		{
 			var subGraph = (SubGraph) segment;
 			subGraph.subGraph = EditorGUILayout.ObjectField("Graph", subGraph.subGraph, typeof(NarrativeGraph)) as NarrativeGraph;
+			if (subGraph.subGraph == null)
+			{
+				if (GUILayout.Button("Create"))
+				{
+					NarrativeGraph createdSubGraph = ScriptableObject.CreateInstance<NarrativeGraph>();
+
+					int i = 0;
+					UnityEngine.Object _exists = AssetDatabase.LoadAssetAtPath("Assets/Narrative/"+subGraph.name+" "+ (i==0?"":i.ToString()) +".asset", typeof(NarrativeGraph));
+					while (_exists != null)
+					{
+						++i;
+						_exists = AssetDatabase.LoadAssetAtPath("Assets/Narrative/"+subGraph.name+" "+ (i==0?"":i.ToString()) +".asset", typeof(NarrativeGraph));
+					}
+					
+					AssetDatabase.CreateAsset(createdSubGraph, "Assets/Narrative/"+subGraph.name+" "+ (i==0?"":i.ToString()) +".asset");
+					AssetDatabase.SaveAssets();
+
+					EditorUtility.FocusProjectWindow();
+					subGraph.subGraph = createdSubGraph;
+				}
+			}
 		}
 	}
 	#endregion
