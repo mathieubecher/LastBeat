@@ -8,7 +8,7 @@ using XNodeEditor;
 
 namespace NarrativeSystem
     {
-    [NodeTint(100,70,100)]
+    [NodeTint(100,70,100), NodeWidth(300)]
     public class AudioSegment : NarrativeSegment {
 
         public PlayingType type = PlayingType.ONESHOT;
@@ -86,8 +86,15 @@ namespace NarrativeSystem
     [NodeEditor.CustomNodeEditorAttribute(typeof(AudioSegment))]
     public class AudioSegmentEditor : NarrativeSegmentEditor
     {
+        SerializedProperty source;
+     
+        void OnEnable()
+        {
+            // Fetch the objects from the GameObject script to display in the inspector
+        }
         public override void Body(NarrativeSegment segment)
         {
+            source = serializedObject.FindProperty("source");
             var audio = (AudioSegment)segment;
 
             audio.waiting = EditorGUILayout.FloatField("Waiting", audio.waiting);
@@ -95,9 +102,9 @@ namespace NarrativeSystem
             
             audio.actorId = EditorGUILayout.TextField("Actor ID", audio.actorId);
             
-            audio.source = EditorGUILayout.TextField("Source", audio.source);
-            
             audio.type = (PlayingType)EditorGUILayout.EnumPopup("Type", audio.type);
+            EditorGUILayout.PropertyField(source, new GUIContent("Source"), GUILayout.Height(40));
+            
         }
     }
     #endregion

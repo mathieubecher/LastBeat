@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Name: Dialog Segment
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1096, y: 152}
+  position: {x: -1192, y: 216}
   ports:
     keys:
     - input
@@ -142,7 +142,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 1
   outputs: []
-  active: 0
+  active: 1
   type: 0
   source: testdialog0
   actorId: Actor1
@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Name: Sub Graph
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -264, y: 312}
+  position: {x: -8, y: 344}
   ports:
     keys:
     - input
@@ -272,7 +272,7 @@ MonoBehaviour:
   outputs: []
   active: 0
   type: 0
-  source: testaudio0
+  source: event:/Tests/TestEvent_Play
   actorId: Actor1
   waiting: 0
 --- !u!114 &-4732060650757480546
@@ -394,9 +394,10 @@ MonoBehaviour:
   - {fileID: -4732060650757480546}
   - {fileID: -1711299925606732860}
   _actives:
-  - {fileID: 3143158614583022121}
+  - {fileID: -6095351589182064281}
   - {fileID: -1711299925606732860}
-  - {fileID: 4143828812003321438}
+  - {fileID: 7053723623155730788}
+  - {fileID: 2228536541450329766}
   _requestings: []
   narrativeManager: {fileID: 0}
 --- !u!114 &1479432652932747704
@@ -412,7 +413,7 @@ MonoBehaviour:
   m_Name: Sub Graph
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -136, y: 40}
+  position: {x: -152, y: -40}
   ports:
     keys:
     - input
@@ -476,7 +477,7 @@ MonoBehaviour:
   m_Name: Dialog Segment
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -520, y: 120}
+  position: {x: -424, y: 152}
   ports:
     keys:
     - input
@@ -521,7 +522,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 1
   outputs: []
-  active: 0
+  active: 1
   type: 0
   source: testdialog2
   actorId: Actor1
@@ -540,7 +541,7 @@ MonoBehaviour:
   m_Name: Listen Event Segment
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1096, y: -136}
+  position: {x: -1160, y: -200}
   ports:
     keys:
     - input
@@ -592,7 +593,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   outputs: []
-  active: 1
+  active: 0
   listener: 0
   comparator: 1
   value: 5
@@ -611,7 +612,7 @@ MonoBehaviour:
   m_Name: Audio Segment
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -24, y: 392}
+  position: {x: 248, y: 280}
   ports:
     keys:
     - input
@@ -643,7 +644,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   outputs: []
-  active: 1
+  active: 0
   type: 0
   source: testaudio1
   actorId: Actor2
@@ -706,5 +707,5 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 1
   outputs: []
-  active: 0
+  active: 1
   duration: 1

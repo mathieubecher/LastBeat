@@ -11,10 +11,12 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/xNode-examples/Examples/LogicToy/Editor/LogicNodeEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/xNode-examples/Examples/LogicToy/Nodes/PulseNode.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/FMOD/src/Runtime/EventRefAttribute.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/XNode/Segment/ParameterSegment.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/xNode-examples/Examples/LogicToy/Nodes/LogicNode.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/xNode-examples/Examples/LogicToy/Nodes/ToggleNode.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/xNode-master/Scripts/Editor/RenamePopup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/FMOD/src/Runtime/Timeline/FMODEventTrack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SteamAudio/Editor/SteamAudioWindow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/xNode-master/Scripts/Editor/NodeGraphEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Narrative/NarrativeActor.cs" root0="FORCE_HIGHLIGHTING" />
@@ -43,6 +45,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Script/Cardiogram/Line.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/XNode/Segment/GoToSegment.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/xNode-master/Scripts/Editor/Drawers/NodeEnumDrawer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/EventRefDrawer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/XNode/Segment/WaitSegment.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SteamAudio/SteamAudioProbeBox.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Narrative/NarrativeManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -74,11 +77,12 @@
         <option value="$PROJECT_DIR$/Assets/Script/Narrative/NarrativeActor.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/XNode/Segment/GoToSegment.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/XNode/Segment/DialogSegment.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/XNode/Segment/AudioSegment.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/XNode/Segment/ParameterSegment.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/XNode/Segment/SubGraph.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/XNode/Segment/NarrativeSegment.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/XNode/Segment/ListenEventSegment.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Runtime/Timeline/FMODEventTrack.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/XNode/Segment/AudioSegment.cs" />
       </list>
     </option>
   </component>
@@ -119,7 +123,7 @@
       <workItem from="1625394248403" duration="16347000" />
       <workItem from="1625419073204" duration="11020000" />
       <workItem from="1625906358826" duration="9512000" />
-      <workItem from="1625934244704" duration="863000" />
+      <workItem from="1625934244704" duration="3835000" />
     </task>
     <servers />
   </component>
