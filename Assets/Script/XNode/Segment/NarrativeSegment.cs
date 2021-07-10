@@ -16,7 +16,7 @@ namespace NarrativeSystem{
         [Output(dynamicPortList = true)] public List<Connection> outputs;
 
         public bool active = false;
-        private NarrativeGraph narrativeGraph;
+        protected NarrativeGraph narrativeGraph;
         
         public virtual void ResetNode()
         {
@@ -50,7 +50,7 @@ namespace NarrativeSystem{
 
 	        foreach (var fieldname in GetOutputPortsName ())
 	        {
-		        if (fieldname != "outputs")
+		        if (fieldname != "outputs" && fieldname != "exit")
 		        {
 			        port = GetOutputPort(fieldname);
 			        ++i;
@@ -111,9 +111,11 @@ namespace NarrativeSystem{
 		    {
 			    Body(segment);
 		    }
+		    EndBody(segment);
 	    }
 
 	    public virtual void Body(NarrativeSegment segment){}
+	    public virtual void EndBody(NarrativeSegment segment){}
     }
     #endregion
     

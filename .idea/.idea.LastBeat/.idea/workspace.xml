@@ -72,13 +72,13 @@
         <option value="$PROJECT_DIR$/Assets/Script/Narrative/NarrativeManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/xNode-master/Scripts/Editor/NodeEditorPreferences.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Narrative/NarrativeActor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/XNode/Segment/NarrativeSegment.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/XNode/Segment/GoToSegment.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/XNode/Segment/ListenEventSegment.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/XNode/Segment/DialogSegment.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/XNode/Segment/AudioSegment.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/XNode/Segment/ParameterSegment.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/XNode/Segment/SubGraph.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/XNode/Segment/NarrativeSegment.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/XNode/Segment/ListenEventSegment.cs" />
       </list>
     </option>
   </component>
@@ -119,6 +119,7 @@
       <workItem from="1625394248403" duration="16347000" />
       <workItem from="1625419073204" duration="11020000" />
       <workItem from="1625906358826" duration="9512000" />
+      <workItem from="1625934244704" duration="863000" />
     </task>
     <servers />
   </component>

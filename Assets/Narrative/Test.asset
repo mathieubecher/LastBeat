@@ -29,6 +29,9 @@ MonoBehaviour:
       - fieldName: outputs 0
         node: {fileID: 3143158614583022121}
         reroutePoints: []
+      - fieldName: exit
+        node: {fileID: 3143158614583022121}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -139,7 +142,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 1
   outputs: []
-  active: 1
+  active: 0
   type: 0
   source: testdialog0
   actorId: Actor1
@@ -318,7 +321,7 @@ MonoBehaviour:
   image: {fileID: 2800000, guid: 2d7f0ec8e7270474ca602e9a3fa4987a, type: 3}
   waiting: 0
   actorId: Actor1
-  pos: {x: 0.3155535, y: 0.48915815}
+  pos: {x: 0.5339338, y: 0.65307677}
   duration: 5
 --- !u!114 &-1711299925606732860
 MonoBehaviour:
@@ -359,7 +362,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   outputs: []
-  active: 0
+  active: 1
   target: 1
   eventFMod: 
   actorId: Actor1
@@ -392,7 +395,8 @@ MonoBehaviour:
   - {fileID: -1711299925606732860}
   _actives:
   - {fileID: 3143158614583022121}
-  - {fileID: -6095351589182064281}
+  - {fileID: -1711299925606732860}
+  - {fileID: 4143828812003321438}
   _requestings: []
   narrativeManager: {fileID: 0}
 --- !u!114 &1479432652932747704
@@ -542,6 +546,7 @@ MonoBehaviour:
     - input
     - outputs
     - outputs 0
+    - exit
     values:
     - _fieldName: input
       _node: {fileID: 3143158614583022121}
@@ -574,13 +579,25 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 1
+    - _fieldName: exit
+      _node: {fileID: 3143158614583022121}
+      _typeQualifiedName: NarrativeSystem.NarrativeSegment+Connection, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -7154260074155529136}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
   outputs: []
   active: 1
   listener: 0
   comparator: 1
   value: 5
   duration: 2
-  exitTime: 0
+  exitTime: 5
 --- !u!114 &4143828812003321438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -626,7 +643,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   outputs: []
-  active: 0
+  active: 1
   type: 0
   source: testaudio1
   actorId: Actor2

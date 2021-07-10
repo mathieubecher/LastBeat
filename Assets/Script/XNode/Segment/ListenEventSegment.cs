@@ -35,6 +35,8 @@ namespace NarrativeSystem
 
 		private float _exitTimer;
 		
+		[Output] public Connection exit;
+		
 		public override void InitNode(NarrativeGraph _graph)
 		{
 			base.InitNode(_graph);
@@ -45,10 +47,12 @@ namespace NarrativeSystem
 		public override void UpdateNode()
 		{
 			base.UpdateNode();
+			Debug.Log(_exitTimer);
 			if (_exitTimer > 0f)
-			{
+			{	
 				_exitTimer -= Time.deltaTime;
-				CloseNode();
+				if(_exitTimer <= 0f)
+					CloseNode();
 			}
 
 			if(ListenEvent()) EndNode();
@@ -80,6 +84,9 @@ namespace NarrativeSystem
 		public override void CloseNode()
 		{
 			Debug.Log("Exit [ ListenEvent ]");
+			NodePort port = GetOutputPort("exit");
+			if(port.IsConnected)
+				narrativeGraph.RequestingNode(port.Connection.node as NarrativeSegment);
 			base.CloseNode();
 		}
 
@@ -105,6 +112,12 @@ namespace NarrativeSystem
 			GUILayout.Space(EDITOR_SPACING);
 			
 			listenEvent.exitTime = EditorGUILayout.FloatField("Exit Time", listenEvent.exitTime);
+		}
+
+		public override void EndBody(NarrativeSegment segment)
+		{
+			var listenEvent = (ListenEventSegment) segment; 
+			NodeEditorGUILayout.PortField(segment.GetPort("exit"));
 		}
 	}
 	#endregion
