@@ -11,9 +11,10 @@ namespace NarrativeSystem
 	[NodeTint(50,50,50)]
 	public class GoToSegment : NarrativeSegment
 	{
+		public Texture image;
 		public float waiting;
 		public string actorId;
-		public string pos;
+		public Vector2 pos;
 		public float duration;
 		protected float _waitingTimer = 0.0f;
 		protected float _timer = 0.0f;
@@ -67,15 +68,45 @@ namespace NarrativeSystem
 	[NodeEditor.CustomNodeEditorAttribute(typeof(GoToSegment))]
 	public class GotoSegmentEditor : NarrativeSegmentEditor
 	{
+		protected static Texture image;
+		private Vector2 dotPos;
 		public override void Body(NarrativeSegment segment)
 		{
-			var goTo = (GoToSegment)segment;
+			if (image == null)
+			{
+				image = Resources.Load("plan") as Texture;
+			}
+
+			var goTo = (GoToSegment) segment;
 
 			goTo.waiting = EditorGUILayout.FloatField("Waiting", goTo.waiting);
 			GUILayout.Space(10);
 			goTo.actorId = EditorGUILayout.TextField("Actor ID", goTo.actorId);
-			goTo.pos = EditorGUILayout.TextField("GoTo", goTo.pos);
 			goTo.duration = EditorGUILayout.FloatField("Duration", goTo.duration);
+
+			GUILayout.Space(10);
+			int width = GetWidth() - GetBodyStyle().padding.horizontal ;
+			int height = width * image.height / image.width;
+			GUILayout.Box(image, GUILayout.Width(width), GUILayout.Height(height));
+
+			var rect = GUILayoutUtility.GetLastRect();
+			
+			
+			Vector2 pos = Event.current.mousePosition - rect.position;
+			if ((Event.current.button == 0) && (Event.current.type == EventType.MouseDown) && 
+			    (pos.x >= 0 && pos.x < width && pos.y >= 0 && pos.y < height))
+			{
+				dotPos = pos;
+				goTo.pos = new Vector2(pos.x/width, pos.y/height);
+			}
+			
+			Rect dotRect = GUILayoutUtility.GetLastRect();
+			dotRect.size = new Vector2(10, 10);
+			dotRect.position = dotPos + rect.position - new Vector2(5,10);
+			dotRect.y += 6;
+			GUI.color = segment.active ? Color.green : Color.red;
+			GUI.DrawTexture(dotRect, NodeEditorResources.dot);
+			GUI.color = Color.white;
 		}
 	}
 	#endregion

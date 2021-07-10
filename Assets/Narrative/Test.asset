@@ -142,7 +142,8 @@ MonoBehaviour:
       _dynamic: 1
   outputs: []
   active: 1
-  waiting: 7
+  motor: 0
+  type: 0
   source: testdialog0
   sourcePEngine: {fileID: 0}
   actorId: Actor1
@@ -290,7 +291,7 @@ MonoBehaviour:
   m_Name: Go To Segment
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -808, y: 488}
+  position: {x: -824, y: 552}
   ports:
     keys:
     - input
@@ -320,9 +321,10 @@ MonoBehaviour:
       _dynamic: 0
   outputs: []
   active: 0
+  image: {fileID: 2800000, guid: 2d7f0ec8e7270474ca602e9a3fa4987a, type: 3}
   waiting: 0
   actorId: Actor1
-  pos: 
+  pos: {x: 0.3155535, y: 0.48915815}
   duration: 5
 --- !u!114 &-1711299925606732860
 MonoBehaviour:
@@ -337,7 +339,7 @@ MonoBehaviour:
   m_Name: Parameter Segment
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -488, y: 520}
+  position: {x: -504, y: 536}
   ports:
     keys:
     - input
@@ -414,7 +416,7 @@ MonoBehaviour:
   m_Name: Sub Graph
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -120, y: -8}
+  position: {x: -136, y: 40}
   ports:
     keys:
     - input
@@ -635,7 +637,8 @@ MonoBehaviour:
       _dynamic: 0
   outputs: []
   active: 0
-  waiting: 0
+  motor: 0
+  type: 0
   source: testaudio1
   sourcePEngine: {fileID: 0}
   actorId: Actor2

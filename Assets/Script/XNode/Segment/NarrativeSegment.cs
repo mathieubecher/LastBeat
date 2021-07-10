@@ -77,6 +77,7 @@ namespace NarrativeSystem{
     [NodeEditor.CustomNodeEditorAttribute(typeof(NarrativeSegment))]
     public abstract class NarrativeSegmentEditor : NodeEditor
     {
+	    private bool _foldout = true;
 	    public override void OnHeaderGUI() {
 		    // Initialization
 		    var segment = serializedObject.targetObject as NarrativeSegment;
@@ -96,9 +97,6 @@ namespace NarrativeSystem{
             
 		    NarrativeSegment segment = serializedObject.targetObject as NarrativeSegment;
 		    NodeEditorGUILayout.PortField(segment.GetPort("input"));
-		    GUILayout.Space(10);
-		    Body(segment);
-		    GUILayout.Space(10);
 		    
 		    NodeEditorGUILayout.DynamicPortList(
 			    "outputs",
@@ -108,6 +106,12 @@ namespace NarrativeSystem{
 			    Node.ConnectionType.Override,
 			    Node.TypeConstraint.None);
 		    serializedObject.ApplyModifiedProperties();
+		    
+		    _foldout = EditorGUILayout.Foldout(_foldout, "Data");
+		    if (_foldout)
+		    {
+			    Body(segment);
+		    }
 	    }
 
 	    public virtual void Body(NarrativeSegment segment){}
