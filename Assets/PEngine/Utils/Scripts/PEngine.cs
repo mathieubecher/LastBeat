@@ -108,7 +108,7 @@ public class PEngine : MonoBehaviour
                     //Determining if it's a simple sound or a container
                     if (currentStep.soundToStop.GetType().FullName == "SoundSO")
                     {
-                        //Debug.Log("Stoping Sound.");
+                        Debug.Log("Stoping Sound.");
                         StopSound(currentStep, parent);
                     }
                     else if (currentStep.soundToStop.GetType().FullName == "ContainerSO")

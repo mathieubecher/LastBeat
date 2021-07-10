@@ -6,6 +6,9 @@ public class AudioBankLoader : MonoBehaviour
 {
     [FMODUnity.BankRef]
     public string bank;
+
+    [FMODUnity.ParamRef]
+    public string parameter;
     private void Awake()
     {
         FMODUnity.RuntimeManager.LoadBank(bank);

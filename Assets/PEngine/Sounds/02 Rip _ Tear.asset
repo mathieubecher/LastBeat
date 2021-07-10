@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 02 Rip _ Tear
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: a0de8f1ba21b0fd4488321390ba70cab, type: 3}
-  bus: {fileID: 0}
-  volume: 0.3
+  bus: {fileID: 7951745259034627093, guid: d4066285f33758e41acbe2e06ce65fa0, type: 2}
+  volume: 0.087
   setVolumeParameter: 0
   volumeParameter: {fileID: 0}
   volumeCurve:
@@ -62,27 +62,45 @@ MonoBehaviour:
     m_RotationOrder: 4
   customSpatialization: 0
   bypassPanning: 0
-  maxAttenuationDistance: 50
+  maxAttenuationDistance: 40
   attenuationCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: -0
-      value: 0.99928683
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
+      time: 0
+      value: 1
+      inSlope: -0.4394009
+      outSlope: -0.4394009
+      tangentMode: 34
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.33333334
     - serializedVersion: 3
-      time: 1
-      value: 0.009154715
-      inSlope: -0.22027178
-      outSlope: -0.22027178
+      time: 0.3808303
+      value: 0.8326628
+      inSlope: -1.6478181
+      outSlope: -1.6478181
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.5155665
+      value: 0.44782442
+      inSlope: -0.051845912
+      outSlope: -0.051845912
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.14991438
+      inWeight: 0.33333334
+      outWeight: 0.16472568
+    - serializedVersion: 3
+      time: 0.9988531
+      value: -0.007824451
+      inSlope: -0.94281304
+      outSlope: -0.94281304
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2

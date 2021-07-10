@@ -44,6 +44,7 @@ public class SoundSO : ScriptableObject
     public AnimationCurve panningCurve;
 
     [Space]
+    [Header("0 = 2D, 1 = 3D")]
     [Range(0,1)]
     public float spatialBlend = 0;
     public bool setSpatialBlendParameter;

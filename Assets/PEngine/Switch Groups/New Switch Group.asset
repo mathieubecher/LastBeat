@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: New Switch Group
   m_EditorClassIdentifier: 
   globalScope: 0
-  switches: []
+  switches:
+  - bob
+  - michek
+  - jean
